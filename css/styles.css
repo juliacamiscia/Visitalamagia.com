@@ -1,0 +1,762 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: lobster;
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face{
+    font-family: maliExtraLight;
+    src: url(../fonts/Mali-ExtraLight.ttf);
+}
+@font-face {
+    font-family: maliLight;
+    src: url(../fonts/Mali-Light.ttf);
+}
+@font-face {
+    font-family: maliSemiBold;
+    src: url(../fonts/Mali-SemiBold.ttf);
+}
+@font-face {
+    font-family: maliBold;
+    src: url(../fonts/Mali-Bold.ttf);
+}
+
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+    background-color: #FFFAE4;
+}
+.contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:"video video video video video"
+                        "texto texto texto tabla tabla"
+                        "sitios sitios . publi publi"
+                        "footer footer footer footer footer";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+/* ENCABEZADO */
+
+header{
+    background-image: url(../images/fondo\ mickey.jpg);
+}
+
+.encabezado__logo{
+    display: inline-block;
+    border: dotted 3px black;
+    border-radius: 200px;
+    margin: 40px 50px;
+    width: 100px;
+    height: 100px;
+}
+.encabezado__titulo{
+    display: inline-block;
+    text-align: center;
+    background-color:#FFFAE4;
+    border:solid 3px #CE214F;
+    border-radius: 15px;
+    color: crimson;
+    margin: 20px 180px;
+    padding: 20px 20px;
+    width: 50%;
+    font-family: lobster;
+    font-size: 60px;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+.navegacion{
+    font-family: maliBold;
+    margin-left: 38%;
+    padding: 10px;
+    background-color: #E9C8EC;
+    border: solid 5px rgb(214, 182, 188);
+    border-radius: 15px;
+}
+
+.navegacion ul{
+    list-style: none;
+}
+
+.menu >li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu >li >a{
+    display: inline-block;
+    padding: 15px 20px;
+    color: crimson;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    background-color: brown;
+    border-radius: 15px;
+}
+
+.submenu1{
+    position: absolute;
+    background-color: #E9C8EC;
+    width: 12%;
+    border-radius: 15px;
+}
+
+.submenu1 li a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: crimson;
+    text-align: center;
+    font-size: 12px;
+}
+
+.menu li a:hover .submenu{
+    position: absolute;
+    display: block;
+}
+
+.submenu2{
+    position: absolute;
+    background-color: #E9C8EC;
+    width: 10%;
+    border-radius: 15px;
+    margin-left: 12%;
+}
+
+.submenu2 li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: crimson;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* TEXTO INDEX*/
+.texto{
+    grid-area: texto;
+    margin: 10px;
+    text-align: justify;
+    font-family:maliLight;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 20%;
+}
+
+/* TABLA */
+.tabla1{
+    grid-area: tabla;
+    margin: 5px;
+}
+.tabla{
+    font-family: maliLight;
+    font-size: 15px;
+    border-radius: 10px;
+    border: double 5px crimson;
+    background-color: #FFFAE4;
+    color: crimson;
+    text-align: center;
+    padding: 5px;
+}
+
+/* TITULOS */
+h3{
+    font-family: lobster;
+    font-size: 20px;
+    color:  #FFFAE4;
+    text-align: center;
+    background-color: crimson;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+h2{
+    display:block;
+    font-family: lobster;
+    font-size: 24px;
+    color: crimson;
+    text-align: center;
+    padding: 8px;
+}
+
+/* VIDEO */ 
+.video{
+    grid-area: video;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.video iframe{
+    width: 90%;
+/*    margin-top: 16%;*/
+}
+
+/* CARDS SITIOS Y PUBLICIDAD */
+
+.card__lista li a{
+    font-family: maliLight;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: rgb(190, 171, 207);
+    border-radius: 5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.card__lista li{
+    list-style-type: none;
+}
+
+.sitios{
+    grid-area: sitios;
+    background-image: url(../images/fondo\ mickey.jpg);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.publi{
+    grid-area: publi;
+    background-image: url(../images/fondo\ mickey.jpg);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FOOTER */
+footer{
+    grid-area: footer;
+}
+.pfooter{
+    font-family: maliLight;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    background-color:#E9C8EC;
+    padding: 20px;
+}
+
+/* PÁGINAS DISNEY Y UNIVERSAL */
+/*EFECTO PARALLAX*/
+
+.img-uno{
+    background-image: url(../images/Magic\ Kingdom1.jpg);
+    margin-top: 15%;
+}
+.img-dos{
+    background-image: url(../images/Animal\ Kingdom.png);
+}
+.img-tres{
+    background-image: url(../images/Epcot.jpg);
+}
+.img-cuatro{
+    background-image: url(../images/Hollywood\ Studios1.jpg);
+}
+.img-cinco{
+    background-image: url(../images/universal-tarjeta.jpg);
+    margin-top: 15%;
+}
+.img-seis{
+    background-image: url(../images/Islands\ of\ Adventure.png);
+}
+.img-siete{
+    background-image: url(../images/volcanobay5.jpg)
+}
+
+.texto__interior{
+    font-family: maliLight;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 10px;
+}
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    max-width: 100%;
+    position: relative;
+}
+
+.titulo h3{
+    font-family: lobster;
+    font-size: 22px;
+    background-color: crimson;
+    padding: 18px;
+    display: inline;
+    border-radius: 15px;
+}
+
+/* PÁGINA OTRAS ACTIVIDADES */
+
+.contenedorOtras{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas:"otrasAct otrasAct otrasAct"
+                        "card1 card2 card3"
+                        "card4 card5 ."
+                        "footer footer footer";
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.otrasAct{
+    grid-area: otrasAct;
+    margin: 20px;
+}
+#card1{
+    grid-area: card1;
+}
+#card2{
+    grid-area: card2;
+}
+#card3{
+    grid-area: card3;
+}
+#card4{
+    grid-area: card4;
+}
+#card5{
+    grid-area: card5;
+}
+
+.img__otrasActividades{
+    margin-bottom: 10%;
+    /* margin-top: 15%; */
+    border-radius: 15px;
+}
+.cardImagenes{
+    border-radius: 15px;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.cardOtras{
+    background-color: #FFFAE4;
+    border-radius: 15px;
+    padding: 50px;
+    border: crimson 3px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 8px;
+    text-align: justify;
+}
+.cardOtras p{
+    font-size: 14px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    font-family: maliBold;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* PÁGINA TICKETS Y HOTELES */
+
+.contenedorTyh{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:"tickets tickets tickets tabla tabla"
+                        "img hoteles hoteles hoteles hoteles"
+                        "img1 hoteles hoteles hoteles hoteles"
+                        "footer footer footer footer footer";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.tablaTyh{
+    font-family: maliLight;
+    font-size: 15px;
+    border-radius: 10px;
+    border: double 5px crimson;
+    background-color: #FFFAE4;
+    color: crimson;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    height: 80%;
+}
+
+.tickets{
+    grid-area: tickets;
+    text-align: justify;
+    padding: 20px;
+}
+
+.hoteles{
+    grid-area: hoteles;
+    text-align: justify;
+    padding: 20px;
+    margin: 10px;
+}
+
+.imgHoteles{
+    grid-area: img;
+    height: 240px;
+    width: 400px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.imgHoteles1{
+    grid-area: img1;
+    height: 240px;
+    width: 400px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+/*PÁG. FORMULARIO DE CONTACTO*/
+
+.img__formulario{
+    margin-left: 20%;
+    margin-top: 17%;
+    border-radius: 15px;
+    width: 900px;
+    height: 600px;
+}
+
+.formulario{
+    padding: 20px;
+    font-family: maliSemiBold;
+    font-size: 14px;
+    color:crimson;
+    background-color:  #FFFAE4;
+    border: solid 4px rgb(190, 171, 207);
+    margin-top: 5%;
+    display: inline-block;
+    margin-left: 25%;
+}
+
+label{
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+}
+textarea{
+    display: block;
+    padding: 5%;
+    height:200px;
+    width: 500px;
+}
+input{
+    height: 20px;
+}
+p{
+    font-family: maliLight;
+    font-size: 16px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px){
+    /* INDEX */
+    .contenedor{
+        grid-template-areas:"video video video"
+                            "texto texto texto"
+                            "tabla tabla tabla"
+                            "sitios . publi"
+                            "footer footer footer";
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+    }
+    .navegacion{
+        margin-left: 0%;
+    }
+
+    /* TICKETS Y HOTELES */
+    .contenedorTyh{
+        grid-template-areas:"tickets tickets tickets"
+                            "tabla tabla tabla"
+                            "img . img1"
+                            "hoteles hoteles hoteles"
+                            "footer footer footer";
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+    }
+
+    .tablaTyh{
+        display: flex;
+        justify-content: center;
+    }
+
+    .encabezado__titulo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .imgHoteles{
+        margin: 0%;
+        height: 200px;
+        width: 250px;
+    }
+    .imgHoteles1{
+        margin: 0%;
+        height: 200px;
+        width: 250px;
+    }
+
+    /* PÁGINA OTRAS ACTIVIDADES */
+
+    .contenedorOtras{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas:"otrasAct otrasAct"
+                            "card1 card2"
+                            "card3 card4"
+                            "card5 ."
+                            "footer footer";
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+    }
+
+    .img__otrasActividades{
+        border-radius: 15px;
+        height: 50%;
+        width: 60%;
+    }
+
+    .cardImagenes{
+        width: 240px;
+        height: 150px;
+    }
+
+    .cardOtras p{
+        font-size: 12px;
+    }
+
+    .link{
+        font-size: 12px;
+    }
+}
+
+/* MEDIA QUERIES 320PX */
+
+@media (max-width: 320px){
+    /* INDEX */
+    .contenedor{
+        grid-template-areas:"video video"
+                            "texto texto"
+                            "tabla ."
+                            "sitios sitios"
+                            "publi publi"
+                            "footer footer";
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+    }
+    .navegacion{
+        margin-left: 0%;
+    }
+    .encabezado__titulo{
+        font-family: lobster;
+        font-size: 30px;
+        margin-left: 25%;
+    }
+    .texto{
+        font-size: 14px;
+    }
+
+    .video iframe{
+        width: 200px;
+        height: 150px;
+    }
+    .card__lista li a{
+        font-family: maliLight;
+        font-size: 10px;
+    }
+    .publi img{
+        width: 150px;
+        height: 100px;
+    }
+    .tabla{
+        font-size: 8px;
+        padding: 0px;
+    }
+    .tabla1{
+        margin: 0px;
+    }
+
+    /* DISNEY Y UNIVERSAL */
+    .texto__interior{
+        font-size: 12px;
+        text-align: center;
+    }
+    .titulo h3{
+        font-size: 14px;
+    }
+
+    /* TICKETS Y HOTELES */
+    .contenedorTyh{
+        width: 100%;
+        grid-template-areas:"tickets tickets" 
+                            "tabla ."
+                            "img img"
+                            "img1 img1"
+                            "hoteles hoteles"
+                            "footer footer";
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+    }
+        
+    .tablaTyh{
+        font-size: 8px;
+        padding: 20px;
+        margin-top: 30px;
+        height: 80%;
+    }
+    .imgHoteles{
+        width: 250px;
+        height: 150px;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 40px;
+    }
+    .imgHoteles1{
+        height: 150px;
+        width: 250px;
+    }
+
+    /* PÁGINA OTRAS ACTIVIDADES */
+    .contenedorOtras{
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas:"otrasAct"
+                            "card1"
+                            "card2"
+                            "card3"
+                            "card4"
+                            "card5"
+                            "footer";
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+    }
+
+    .img__otrasActividades{
+        margin-left: 5%;
+        border-radius: 15px;
+        height: 150px;
+        width: 240px;
+    } 
+    .cardImagenes{
+    width: 240px;
+    height: 150px;
+    }
+
+    .cardOtras{
+    padding: 20px;
+    font-size: 8px;
+    }
+    .cardOtras p{
+    font-size: 10px;
+    }
+
+    .link{
+    font-size: 12px;
+    }
+
+    /* PÁG. FORMULARIO DE CONTACTO */
+    .img__formulario{
+        margin-left: 20%;
+        margin-top: 17%;
+        border-radius: 15px;
+        width: 70%;
+        height: 50%;
+    }
+    .formulario{
+        padding: 20px;
+        font-family: maliSemiBold;
+        font-size: 10px;
+        color:crimson;
+        background-color:  #FFFAE4;
+        border: solid 4px rgb(190, 171, 207);
+        margin-top: 5%;
+        display: inline-block;
+        margin-left: 15%;
+    }
+    
+    label{
+        padding: 10px;
+        display: block;
+        font-size: 10px;
+    }
+    textarea{
+        display: block;
+        padding: 5%;
+        height: 150px;
+        width: 150px;
+    }
+    input{
+        height: 20px;
+    }
+    p{
+        font-family: maliLight;
+        font-size: 8px;
+    }
+
+    .pfooter{
+        font-size: 8px;
+    }
+
+    .navegacion{
+        margin-left: 0%;
+        padding: 2px;
+        display:flex;
+        flex-direction:row;
+    }
+    .menu >li >a{
+        font-size: 8px;
+    }
+    .submenu1 li a{
+        font-size: 5px;
+    }
+    .submenu2 li a{
+        font-size: 5px;
+    }
+}
