@@ -1,4 +1,5 @@
 <img src="images/logo2.png" width="100px" height="100px">
+
 # Visita la magia.com
 
 Visita la Magia es una guía turística on line no oficial, con toda la información que necesitas para los destinos Orlando, Walt Disney World y Universal Studios.
