@@ -69,9 +69,7 @@ header{
 .encabezado__titulo{
     display: inline-block;
     text-align: center;
-    background-image: linear-gradient(rgb(221, 63, 95), rgb(226, 110, 133), rgb(214, 150, 163), rgb(226, 221, 222));
     background-image: linear-gradient(rgb(243, 213, 219), white , rgb(247, 232, 235));
-    
     border:solid 3px #CE214F;
     border-radius: 15px;
     color: crimson;
@@ -212,7 +210,6 @@ h2{
 
 .video iframe{
     width: 90%;
-/*    margin-top: 16%;*/
 }
 
 /* CARDS SITIOS Y PUBLICIDAD */
@@ -434,10 +431,6 @@ footer{
     padding: 20px;
     margin: 10px;
     border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: nowrap;
 }
 .imgHoteles1{
     grid-area: img1;
@@ -446,10 +439,6 @@ footer{
     padding: 20px;
     margin: 10px;
     border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: nowrap;
 }
 
 /*PÁG. FORMULARIO DE CONTACTO*/
