@@ -58,11 +58,20 @@ header{
     margin: 40px 50px;
     width: 100px;
     height: 100px;
+    transition: 4s;
 }
+.encabezado__logo:hover {
+    width: 130px;
+    height: 130px;
+    box-shadow: 5px 5px 5px gray;
+}
+
 .encabezado__titulo{
     display: inline-block;
     text-align: center;
-    background-color:#FFFAE4;
+    background-image: linear-gradient(rgb(221, 63, 95), rgb(226, 110, 133), rgb(214, 150, 163), rgb(226, 221, 222));
+    background-image: linear-gradient(rgb(243, 213, 219), white , rgb(247, 232, 235));
+    
     border:solid 3px #CE214F;
     border-radius: 15px;
     color: crimson;
@@ -114,17 +123,12 @@ header{
 }
 
 .submenu1 li a{
-    display: block;
+    display: none;
     padding: 20px;
     text-decoration: none;
     color: crimson;
     text-align: center;
     font-size: 12px;
-}
-
-.menu li a:hover .submenu{
-    position: absolute;
-    display: block;
 }
 
 .submenu2{
@@ -136,14 +140,17 @@ header{
 }
 
 .submenu2 li a{
-    display: block;
+    display: none;
     padding: 15px;
     text-decoration: none;
     color: crimson;
     text-align: center;
     font-size: 12px;
 }
-
+.menu li:hover >.submenu1{
+    position: absolute;
+    display: block;
+}
 /* TEXTO INDEX*/
 .texto{
     grid-area: texto;
@@ -229,9 +236,7 @@ h2{
     background-image: url(../images/fondo\ mickey.jpg);
     border-radius: 15px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 200px;
 }
 
 .publi{
@@ -243,9 +248,7 @@ h2{
     justify-content: center;
     align-items: center;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-right: 200px;
 }
 
 /* FOOTER */
@@ -350,17 +353,15 @@ footer{
 }
 
 .img__otrasActividades{
-    margin-bottom: 10%;
-    /* margin-top: 15%; */
+    margin-bottom: 30px;
     border-radius: 15px;
+    margin-left: 250px;
 }
 .cardImagenes{
     border-radius: 15px;
     width: 300px;
     height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-left: 20px;
 
 }
 
@@ -455,7 +456,7 @@ footer{
 
 .img__formulario{
     margin-left: 20%;
-    margin-top: 17%;
+    margin-top: 20px;
     border-radius: 15px;
     width: 900px;
     height: 600px;
@@ -619,6 +620,12 @@ p{
         padding: 0px;
     }
     .tabla1{
+        margin: 0px;
+    }
+    .sitios{
+        margin: 0px;
+    }
+    .publi{
         margin: 0px;
     }
 

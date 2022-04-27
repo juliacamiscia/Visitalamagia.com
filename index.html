@@ -6,14 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Visitalamagia.com</title>
         <link rel="shortcut icon" a href="images/logofavicon.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
             <header>
                 <a href="index.html">
-                <img src="images/logo2.png" alt="Visitalamagia" tittle="Visitalamagia" class="encabezado__logo">
+                <img class="encabezado__logo" src="images/logo2.png" alt="Visitalamagia" tittle="Visitalamagia">
                 </a>
-                <h1 class="encabezado__titulo">Visita la Magia</h1>
+                <h1 class="encabezado__titulo" data-aos="flip-up" data-aos-duration="2000">Visita la Magia</h1>
             </header>
             <nav class="navegacion">
                 <ul class="menu">
@@ -36,7 +38,7 @@
                 </ul>
             </nav>
             <div class="contenedor">
-            <article class="video">
+            <article class="video" data-aos="fade-right" data-aos-duration="3000">
                 <iframe width="90%" height="500px" src="https://www.youtube.com/embed/mXTNIXAsKe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </article>
             <article class="texto">
@@ -83,7 +85,7 @@
                 </tr>
             </table>
             </article>
-            <article class="sitios">
+            <article class="sitios" data-aos="flip-up" data-aos-duration="2000">
                 <h3>Sitios de Interés</h3>
                 <ul class="card__lista">
                     <li><a href="https://disneyworld.disney.go.com/es-ar/" target="blank">Disney World Página Oficial</a></li>
@@ -92,7 +94,7 @@
                     <li><a href="https://almundo.com.ar/disney" target="blank">Paquetes a Disney Almundo.com.ar</a></li>
                 </ul>
             </article>
-            <article class="publi">
+            <article class="publi" data-aos="flip-up" data-aos-duration="2000">
                 <a href="https://www.disneyplus.com/es-ar?cid=DSS-Search-Google-71700000075032759-&s_kwcid=AL!8468!3!576668082871!e!!g!!disney%20plus&gclid=Cj0KCQjw0PWRBhDKARIsAPKHFGgU9y0TwJ01eWd0D1X0-IP3NeEvU3h5BOoEX2g-TusZKiW9RUIiHUMaAp9fEALw_wcB&gclsrc=aw.ds" target="blank">
                     <img src="images/Disney Plus.jpg" alt="DisneyPlus" title="DisneyPlus" width="400px" height="250px"> 
                 </a>
@@ -101,5 +103,9 @@
             <p class="pfooter">Visita la Magia es una guía turística on line no oficial para los destinos Orlando y Walt Disney World Resort. Visita la Magia es un sitio privado y no pertenece en forma alguna ni se encuentra afiliado a ©Disney, Disney World, ©Universal Studios u otras marcas registradas.</p>
         </footer>
         </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
