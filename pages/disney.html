@@ -7,33 +7,38 @@
         <title>Visitalamagia.com</title>
         <link rel="shortcut icon" a href="../images/logofavicon.jpg">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/stylesbootstrap.css">
     </head>
     <body>
         <header>
             <img src="../images/logo2.png" alt="Visitalamagia" tittle="Visitalamagia" class="encabezado__logo">
             <h1 class="encabezado__titulo" data-aos="flip-up" data-aos-duration="2000">Visita la Magia</h1>
         </header>
-        <nav class="navegacion">
-            <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="disney.html">Walt Disney World</a></li>
-                    <ul class="submenu1">
-                        <li><a href="disney.html#magic">Magic Kingdom</a></li>
-                        <li><a href="disney.html#animal">Animal Kingdom</a></li>
-                        <li><a href="disney.html#epcot">Epcot</a></li>
-                        <li><a href="disney.html#holly">Hollywood Studios</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid navegacion">
+                <a class="navbar-brand" href="../index.html">Home</a>       
+                    <li class="nav-item dropdown noitem">
+                    <a class="nav-link dropdown-toggle navbar-brand" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="disney.html">Walt Disney World</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="disney.html#magic">Magic Kingdom</a></li>
+                        <li><a class="dropdown-item" href="disney.html#animal">Animal Kingdom</a></li>
+                        <li><a class="dropdown-item" href="disney.html#epcot">Epcot</a></li>
+                        <li><a class="dropdown-item" href="disney.html#holly">Hollywood Studios</a></li>
                     </ul>
-                <li><a href="universal.html">Universal</a></li>
-                    <ul class="submenu2">
-                        <li><a href="universal.html#universal">Universal Studios</a></li>
-                        <li><a href="universal.html#island">Island of Adventure</a></li>
-                        <li><a href="universal.html#volcano">Volcano Bay</a></li>
+                </li>
+                <li class="nav-item dropdown noitem">
+                    <a class="nav-link dropdown-toggle navbar-brand" href="universal.html" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Universal</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="universal.html#universal">Universal Studios</a></li>
+                        <li><a class="dropdown-item" href="universal.html#island">Island of Adventure</a></li>
+                        <li><a class="dropdown-item" href="universal.html#volcano">Volcano Bay</a></li>
                     </ul>
-                <li><a href="tyh.html">Tickets y Hoteles</a></li>
-                <li><a href="otras.html">Otras actividades</a></li>
-                <li><a href="contacto.html">Contacto</a></li>      
-            </ul>
+                </li>
+                <a class="navbar-brand noitem" href="tyh.html">Tickets y Hoteles</a>
+                <a class="navbar-brand noitem" href="otras.html">Otras Actividades</a>
+                <a class="navbar-brand noitem" href="contacto.html">Contacto</a>
+            </div>
         </nav>
         <section>
             <h2>Walt Disney World</h2>
@@ -77,6 +82,7 @@
         <script>
             AOS.init();
         </script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
 

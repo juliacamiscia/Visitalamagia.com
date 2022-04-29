@@ -7,45 +7,50 @@
         <title>Visitalamagia.com</title>
         <link rel="shortcut icon" a href="../images/logofavicon.jpg">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/stylesbootstrap.css">
     </head>
-    <body>
+    <body class="fondo">
             <header>
                 <img src="../images/logo2.png" alt="Visitalamagia" tittle="Visitalamagia" class="encabezado__logo">
                 <h1 class="encabezado__titulo" data-aos="flip-up" data-aos-duration="2000">Visita la Magia</h1>
             </header>
-            <nav class="navegacion">
-                <ul class="menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="disney.html">Walt Disney World</a></li>
-                        <ul class="submenu1">
-                            <li><a href="disney.html#magic">Magic Kingdom</a></li>
-                            <li><a href="disney.html#animal">Animal Kingdom</a></li>
-                            <li><a href="disney.html#epcot">Epcot</a></li>
-                            <li><a href="disney.html#holly">Hollywood Studios</a></li>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid navegacion">
+                    <a class="navbar-brand" href="../index.html">Home</a>       
+                        <li class="nav-item dropdown noitem">
+                        <a class="nav-link dropdown-toggle navbar-brand" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="disney.html">Walt Disney World</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="disney.html#magic">Magic Kingdom</a></li>
+                            <li><a class="dropdown-item" href="disney.html#animal">Animal Kingdom</a></li>
+                            <li><a class="dropdown-item" href="disney.html#epcot">Epcot</a></li>
+                            <li><a class="dropdown-item" href="disney.html#holly">Hollywood Studios</a></li>
                         </ul>
-                    <li><a href="universal.html">Universal</a></li>
-                        <ul class="submenu2">
-                            <li><a href="universal.html#universal">Universal Studios</a></li>
-                            <li><a href="universal.html#island">Island of Adventure</a></li>
-                            <li><a href="universal.html#volcano">Volcano Bay</a></li>
+                    </li>
+                    <li class="nav-item dropdown noitem">
+                        <a class="nav-link dropdown-toggle navbar-brand" href="universal.html" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Universal</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="universal.html#universal">Universal Studios</a></li>
+                            <li><a class="dropdown-item" href="universal.html#island">Island of Adventure</a></li>
+                            <li><a class="dropdown-item" href="universal.html#volcano">Volcano Bay</a></li>
                         </ul>
-                    <li><a href="tyh.html">Tickets y Hoteles</a></li>
-                    <li><a href="otras.html">Otras actividades</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>      
-                </ul>
+                    </li>
+                    <a class="navbar-brand noitem" href="tyh.html">Tickets y Hoteles</a>
+                    <a class="navbar-brand noitem" href="otras.html">Otras Actividades</a>
+                    <a class="navbar-brand noitem" href="contacto.html">Contacto</a>
+                </div>
             </nav>
-            <div class="contenedorTyh">
-            <article class="tickets">
+            <div class="contenedorTyh container-fluid row">
+            <article class="tickets col-lg-7">
                 <h2>Tickets</h2>
                 <h3>Tickets Disney</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum amet asperiores expedita rem ut non quisquam sed ipsa nam, magnam odit distinctio doloribus. Mollitia architecto est facilis repellendus, alias voluptate! Qui inventore assumenda aliquid rem harum, tempora dolorum odit architecto molestiae eveniet deleniti quam in adipisci illum quisquam accusamus, repudiandae neque veritatis, corporis ullam? Doloribus porro praesentium impedit a tenetur. Voluptate ut consequatur quidem, repellat nesciunt perferendis hic facilis ea, inventore quae beatae magnam velit, eos est obcaecati quasi non explicabo a placeat? Placeat iste iure voluptatibus sed eveniet vel. Amet laborum maxime blanditiis provident facere nisi! Sequi odio nam recusandae vel eligendi nulla ipsa molestias deleniti temporibus, eum veniam dicta labore quaerat modi! Cupiditate alias eos hic commodi natus.</p>
                 <h3>Tickets Universal</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum amet asperiores expedita rem ut non quisquam sed ipsa nam, magnam odit distinctio doloribus. Mollitia architecto est facilis repellendus, alias voluptate!Qui inventore assumenda aliquid rem harum, tempora dolorum odit architecto molestiae eveniet deleniti quam in adipisci illum quisquam accusamus, repudiandae neque veritatis, corporis ullam? Doloribus porro praesentium impedit a tenetur.Voluptate ut consequatur quidem, repellat nesciunt perferendis hic facilis ea, inventore quae beatae magnam velit, eos est obcaecati quasi non explicabo a placeat? Placeat iste iure voluptatibus sed eveniet vel.Amet laborum maxime blanditiis provident facere nisi! Sequi odio nam recusandae vel eligendi nulla ipsa molestias deleniti temporibus, eum veniam dicta labore quaerat modi! Cupiditate alias eos hic commodi natus.</p>
             </article>
-            <article class="tabla1">
+            <article class="tabla1 col-lg-5">
                 <h3>Tabla de Precios</h3>
-                <table border="3" cellpadding="10" cellspacing="10" class="tablaTyh">
+                <table border="3" cellpadding="10" cellspacing="10" class="tablaTyh table table-bordered border-secondary">
                     <tr>
                         <th>LUGAR</th>
                         <th>TIPO DE TICKET</th>
@@ -83,8 +88,36 @@
                     </tr>
                 </table>
             </article>
-            <img src="../images/hotelart.png" alt="Hotel" tittle="Hotel" class="imgHoteles" data-aos="zoom-in-down" data-aos-duration="2000">
-            <img src="../images/hotelhabitacion.jpg" alt="Hotel1" tittle="Hotel1" class="imgHoteles1" data-aos="zoom-in-down" data-aos-duration="2000">
+            <div id="carouselExampleIndicators" class="carousel slide carrusel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="../images/hotelart.png" class="d-block w-100 img-fluid" alt="HotelArt">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="../images/hotelhabitacion.jpg" class="d-block w-100 img-fluid" alt="Habitacion">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="../images/hoteldisney.jpg" class="d-block w-100 img-fluid" alt="HotelDisney">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/hoteluniversal.png" class="d-block w-100 img-fluid" alt="HotelUniversal">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
             <article class="hoteles">
                 <h2>Hoteles</h2>
                 <h3>Hoteles Disney</h3>
@@ -100,5 +133,6 @@
         <script>
             AOS.init();
         </script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

@@ -1,0 +1,498 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: lobster;
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face{
+    font-family: maliExtraLight;
+    src: url(../fonts/Mali-ExtraLight.ttf);
+}
+@font-face {
+    font-family: maliLight;
+    src: url(../fonts/Mali-Light.ttf);
+}
+@font-face {
+    font-family: maliSemiBold;
+    src: url(../fonts/Mali-SemiBold.ttf);
+}
+@font-face {
+    font-family: maliBold;
+    src: url(../fonts/Mali-Bold.ttf);
+}
+
+
+/* INDEX */
+
+
+header{
+    background-image: url(../images/fondo\ mickey.jpg);
+}
+.fondo{
+    background-color: rgb(228, 215, 226);
+}
+
+/* .kenburns-top{
+	-webkit-animation: kenburns-top 5s ease-out both;
+	animation: kenburns-top 5s ease-out both;
+}
+
+@-webkit-keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+@keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+    100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    }
+}   */
+
+/* LOGO */
+.encabezado__logo{
+    display: inline-block;
+    border: dotted 3px black;
+    border-radius: 200px;
+    margin: 40px 50px;
+    width: 100px;
+    height: 100px;
+    transition: 4s;
+}
+.encabezado__logo:hover {
+    width: 130px;
+    height: 130px;
+    box-shadow: 5px 5px 5px gray;
+}
+/* TITULO */
+.encabezado__titulo{
+    display: inline-block;
+    margin: 20px 180px;
+    padding: 20px 20px;
+    width: 50%;
+    font-family: lobster;
+    font-size: 60px;
+    background-image: linear-gradient(to left, white, rgb(228, 215, 226));
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* NAVBAR */
+
+.navegacion{
+    font-family: maliBold;
+    padding: 10px;
+    background-color: #E9C8EC;
+    border: solid 5px rgb(214, 182, 188);
+    border-radius: 15px;
+}
+.navegacion a{
+    font-size: 15px;
+}
+.navegacion a:hover{
+    background-image: linear-gradient(white, rgb(214, 182, 188));
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.navegacion ul{
+    background-color: #E9C8EC;
+}
+
+.noitem{
+    list-style: none;
+}
+/* TEXTO INDEX */
+.texto{
+    text-align: justify;
+    font-family:maliLight;
+    font-size: 18px;
+}
+
+/* TABLA */
+.tabla{
+    font-family: maliLight;
+    font-size: 15px;
+    border-radius: 10px;
+    border: double 5px crimson;
+    background-color: rgb(250, 242, 250);
+    color:darkslateblue;
+    text-align: center;
+    padding: 5px;
+}
+
+/* TITULOS */
+h3{
+    font-family: lobster;
+    font-size: 20px;
+    color:  #FFFAE4;
+    text-align: center;
+    background-color: darkslateblue;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+h2{
+    display:block;
+    font-family: lobster;
+    font-size: 24px;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 8px;
+}
+
+/* CARDS SITIOS Y PUBLICIDAD */
+
+.card__lista li a{
+    font-family: maliLight;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: rgb(190, 171, 207);
+    border-radius: 5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.card__lista li{
+    list-style-type: none;
+}
+
+.sitios{
+    grid-area: sitios;
+    background-image: url(../images/fondo\ mickey.jpg);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.publi{
+    grid-area: publi;
+    background-image: url(../images/fondo\ mickey.jpg);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* FOOTER */
+
+.pfooter{
+    font-family: maliLight;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    background-color:#E9C8EC;
+    padding: 20px;
+}
+
+/* PÁGINAS DISNEY Y UNIVERSAL */
+/*EFECTO PARALLAX*/
+
+.img-uno{
+    background-image: url(../images/Magic\ Kingdom1.jpg);
+    margin-top: 15px;
+}
+.img-dos{
+    background-image: url(../images/Animal\ Kingdom.png);
+}
+.img-tres{
+    background-image: url(../images/Epcot.jpg);
+}
+.img-cuatro{
+    background-image: url(../images/Hollywood\ Studios1.jpg);
+}
+.img-cinco{
+    background-image: url(../images/universal-tarjeta.jpg);
+    margin-top: 15px;
+}
+.img-seis{
+    background-image: url(../images/Islands\ of\ Adventure.png);
+}
+.img-siete{
+    background-image: url(../images/volcanobay5.jpg)
+}
+
+.texto__interior{
+    font-family: maliLight;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 10px;
+}
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    max-width: 100%;
+    position: relative;
+}
+
+.titulo h3{
+    font-family: lobster;
+    font-size: 22px;
+    background-color: darkslateblue;
+    padding: 18px;
+    display: inline;
+    border-radius: 15px;
+}
+
+
+/* PÁGINA TICKETS Y HOTELES */
+
+.tabla1{
+    margin-top: 70px;
+}
+.tablaTyh{
+    font-family: maliLight;
+    font-size: 15px;
+    border-radius: 10px;
+    border: double 5px darkslateblue;
+    background-color: rgb(250, 242, 250);
+    color:darkslateblue;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    height: 500px;
+}
+
+.tickets{
+    text-align: justify;
+    padding: 20px;
+}
+
+.hoteles{
+    text-align: justify;
+    padding: 20px;
+    margin: 10px;
+}
+
+.carrusel{
+    width: 600px;
+    height: 450px;
+    margin-left: 370px;
+    margin-top: 20px;
+    background-color: gray;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* PÁGINA OTRAS ACTIVIDADES */
+
+.otrasAct{
+    margin: 20px;
+}
+.img__otrasActividades{
+    margin-bottom: 30px;
+    border-radius: 15px;
+    margin-left: 250px;
+}
+
+.cardsTexto{
+    font-family: maliLight;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.textoOtras{
+    font-family: maliLight;
+    font-size: 16px;
+    text-align: center;
+}
+.botonCentrado{
+    display: block;
+}
+.botonChico{
+    margin-left: 100px;
+    box-shadow: 5px;
+    background-image: linear-gradient(to left,darkslateblue, rgb(214, 182, 188));
+    border: 0px;
+}
+
+.padding{
+    padding: 10px;
+    margin: 10px;
+}
+.cardOtras{
+    background-color: #FFFAE4;
+    border-radius: 15px;
+    padding: 50px;
+    border: crimson 3px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 8px;
+    text-align: justify;
+}
+.cardOtras p{
+    font-size: 14px;
+}
+
+/*PÁG. FORMULARIO DE CONTACTO*/
+
+.img__formulario{
+    margin-left: 20%;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 900px;
+    height: 600px;
+}
+
+.formulario{
+    padding: 20px;
+    font-family: maliSemiBold;
+    font-size: 14px;
+    color:darkslateblue;
+    background-color:  #FFFAE4;
+    border: solid 4px rgb(190, 171, 207);
+    margin-top: 5%;
+    display: inline-block;
+    margin-left: 25%;
+}
+
+label{
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+}
+textarea{
+    display: block;
+    padding: 5%;
+    height:200px;
+    width: 500px;
+}
+input{
+    height: 20px;
+}
+p{
+    font-family: maliLight;
+    font-size: 16px;
+}
+
+
+/* MEDIA QUERIES 320PX */
+
+@media (max-width: 320px){
+    /* INDEX */
+    .contenedor{
+        grid-template-areas:"video video"
+                            "texto texto"
+                            "tabla ."
+                            "sitios sitios"
+                            "publi publi"
+                            "footer footer";
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+    }
+    .navegacion{
+        margin-left: 0%;
+    }
+    .encabezado__titulo{
+        font-family: lobster;
+        font-size: 30px;
+        margin-left: 25%;
+    }
+    .texto{
+        grid-area: texto;
+        font-size: 14px;
+    }
+
+    .video iframe{
+        grid-area: video;
+        width: 200px;
+        height: 150px;
+    }
+    .card__lista li a{
+        font-family: maliLight;
+        font-size: 10px;
+    }
+    .publi img{
+        width: 150px;
+        height: 100px;
+    }
+    .tabla{
+        grid-area: tabla;
+        font-size: 8px;
+        padding: 0px;
+    }
+    .tabla1{
+        margin: 0px;
+    }
+    .sitios{
+        grid-area: sitios;
+        margin: 0px;
+    }
+    .publi{
+        grid-area: publi;
+        margin: 0px;
+    }
+    footer{
+        grid-area: footer;
+    }
+    .pfooter{
+        font-size: 10px;
+        width: 100%;
+    }
+
+    /* PÁGINA TICKETS Y HOTELES */
+
+.tabla1{
+    margin-top: 70px;
+}
+.tablaTyh{
+    font-family: maliLight;
+    font-size: 15px;
+    border-radius: 10px;
+    border: double 5px darkslateblue;
+    background-color: rgb(250, 242, 250);
+    color:darkslateblue;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    height: 500px;
+}
+
+.carrusel{
+    width: 450px;
+    height: 200px;
+    margin: 0px;
+    background-color: gray;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+
+}

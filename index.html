@@ -8,46 +8,55 @@
         <link rel="shortcut icon" a href="images/logofavicon.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/stylesbootstrap.css">
     </head>
-    <body>
+    <body class="fondo">
             <header>
                 <a href="index.html">
                 <img class="encabezado__logo" src="images/logo2.png" alt="Visitalamagia" tittle="Visitalamagia">
                 </a>
                 <h1 class="encabezado__titulo" data-aos="flip-up" data-aos-duration="2000">Visita la Magia</h1>
             </header>
-            <nav class="navegacion">
-                <ul class="menu">
-                    <li><a href="pages/disney.html">Walt Disney World</a></li>
-                        <ul class="submenu1">
-                            <li><a href="pages/disney.html#magic">Magic Kingdom</a></li>
-                            <li><a href="pages/disney.html#animal">Animal Kingdom</a></li>
-                            <li><a href="pages/disney.html#epcot">Epcot</a></li>
-                            <li><a href="pages/disney.html#holly">Hollywood Studios</a></li>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid navegacion">
+                    <a class="navbar-brand" href="index.html">Home</a>       
+                        <li class="nav-item dropdown noitem">
+                        <a class="nav-link dropdown-toggle navbar-brand" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="pages/disney.html">Walt Disney World</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pages/disney.html#magic">Magic Kingdom</a></li>
+                            <li><a class="dropdown-item" href="pages/disney.html#animal">Animal Kingdom</a></li>
+                            <li><a class="dropdown-item" href="pages/disney.html#epcot">Epcot</a></li>
+                            <li><a class="dropdown-item" href="pages/disney.html#holly">Hollywood Studios</a></li>
                         </ul>
-                    <li><a href="pages/universal.html">Universal</a></li>
-                        <ul class="submenu2">
-                            <li><a href="pages/universal.html#universal">Universal Studios</a></li>
-                            <li><a href="pages/universal.html#island">Island of Adventure</a></li>
-                            <li><a href="pages/universal.html#volcano">Volcano Bay</a></li>
+                    </li>
+                    <li class="nav-item dropdown noitem">
+                        <a class="nav-link dropdown-toggle navbar-brand" href="pages/universal.html" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Universal</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pages/universal.html#universal">Universal Studios</a></li>
+                            <li><a class="dropdown-item" href="pages/universal.html#island">Island of Adventure</a></li>
+                            <li><a class="dropdown-item" href="pages/universal.html#volcano">Volcano Bay</a></li>
                         </ul>
-                    <li><a href="pages/tyh.html">Tickets y Hoteles</a></li>
-                    <li><a href="pages/otras.html">Otras actividades</a></li>
-                    <li><a href="pages/contacto.html">Contacto</a></li>    
-                </ul>
+                    </li>
+                    <a class="navbar-brand noitem" href="pages/tyh.html">Tickets y Hoteles</a>
+                    <a class="navbar-brand noitem" href="pages/otras.html">Otras Actividades</a>
+                    <a class="navbar-brand noitem" href="pages/contacto.html">Contacto</a>
+                </div>
             </nav>
-            <div class="contenedor">
-            <article class="video" data-aos="fade-right" data-aos-duration="3000">
+            <div class="container-fluid row">
+            <article class="video col-lg-11 offset-lg-1" data-aos="fade-right" data-aos-duration="3000">
                 <iframe width="90%" height="500px" src="https://www.youtube.com/embed/mXTNIXAsKe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </article>
-            <article class="texto">
+            <article class="texto col-lg-6">
                 <h2 class="principal__titulo">Parques</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem nisi accusantium atque numquam reprehenderit debitis praesentium sunt cupiditate quaerat, repellat voluptate consequatur dignissimos recusandae quos omnis provident! Aliquam, officia eius? Quo, cum excepturi! Eaque corrupti quis doloremque minus soluta recusandae totam commodi option accusantium deleniti modi ducimus reprehenderit tenetur quibusdam voluptate, impedit expedita architecto adipisci a. Veritatis quidem fuga ullam? Ipsam quisquam quod tempora nesciunt modi corporis necessitatibus, reiciendis, iure quae molestiae dicta explicabo exercitationem commodi pariatur expedita sequatur accusamus cum molestias esse, adipisci maxime quaerat quidem! Deserunt, rem eius? Quam, nisi beatae, exercitationem deserunt nostrum tenetur dolore distinctio voluptatum pariatur vero, quibusdam excepturi corrupti odio ullam? Accusamus culpa maxime pariatur voluptatibus eius itaque, iste velit asperiores tenetur aut illum. Dolorem eaque quos aut quae odit, totam sapiente maxime explicabo expedita, animi cumque magni qui maiores unde! Aperiam, veritatis minima in quo fugiat, omnis placeat beatae repellendus harum blanditiis obcaecati!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut commodi nostrum, iusto necessitatibus, maxime culpa beatae dolorem, numquam optio saepe dolor eaque. Dignissimos quo officiis magni non. Quae, fugit ad!
+                Doloribus, eaque corporis aliquid placeat accusamus illum iure possimus molestiae temporibus ut corrupti atque nam quas libero ipsum tenetur totam voluptatem hic omnis magni itaque rerum pariatur vel. Quis, sapiente.
+                Ut quia ad impedit, quibusdam ipsam dicta dolore ab eligendi cupiditate architecto nemo dolorum illo, distinctio doloribus voluptas corrupti temporibus. Commodi rem atque quibusdam ea natus totam cupiditate fuga aperiam?
+                Voluptatum possimus ut quaerat cum ea temporibus, id similique maiores voluptate nulla animi rerum ipsum incidunt in nisi dolore eveniet corporis harum architecto beatae praesentium? Excepturi accusamus corrupti blanditiis laborum.</p>
             </article>
-            <article class="tabla1">
+            <article class="tabla1 col-lg-6">
                 <h2 class="principal__titulo">Precios de Tickets</h2>
-                <table border="3" cellpadding="15" cellspacing="15" class="tabla">
+                <table border="3" cellpadding="15" cellspacing="15" class="table table-bordered border-secondary tabla">
                 <tr>
                     <th>LUGAR</th>
                     <th>TIPO DE TICKET</th>
@@ -85,7 +94,7 @@
                 </tr>
             </table>
             </article>
-            <article class="sitios" data-aos="flip-up" data-aos-duration="2000">
+            <article class="sitios col-lg-4 offset-lg-2" data-aos="flip-up" data-aos-duration="2000">
                 <h3>Sitios de Interés</h3>
                 <ul class="card__lista">
                     <li><a href="https://disneyworld.disney.go.com/es-ar/" target="blank">Disney World Página Oficial</a></li>
@@ -94,18 +103,19 @@
                     <li><a href="https://almundo.com.ar/disney" target="blank">Paquetes a Disney Almundo.com.ar</a></li>
                 </ul>
             </article>
-            <article class="publi" data-aos="flip-up" data-aos-duration="2000">
+            <article class="publi offset-lg-1 col-lg-4" data-aos="flip-up" data-aos-duration="2000">
                 <a href="https://www.disneyplus.com/es-ar?cid=DSS-Search-Google-71700000075032759-&s_kwcid=AL!8468!3!576668082871!e!!g!!disney%20plus&gclid=Cj0KCQjw0PWRBhDKARIsAPKHFGgU9y0TwJ01eWd0D1X0-IP3NeEvU3h5BOoEX2g-TusZKiW9RUIiHUMaAp9fEALw_wcB&gclsrc=aw.ds" target="blank">
                     <img src="images/Disney Plus.jpg" alt="DisneyPlus" title="DisneyPlus" width="400px" height="250px"> 
                 </a>
             </article>
-        <footer>
+            <footer class="col-lg-12">
             <p class="pfooter">Visita la Magia es una guía turística on line no oficial para los destinos Orlando, Walt Disney World Resort y Universal. Visita la Magia es un sitio privado y no pertenece en forma alguna ni se encuentra afiliado a ©Disney, Disney World, ©Universal Studios u otras marcas registradas.</p>
-        </footer>
+            </footer>
         </div>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
+        <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
