@@ -26,9 +26,7 @@
     src: url(../fonts/Mali-Bold.ttf);
 }
 
-
 /* INDEX */
-
 
 header{
     background-image: url(../images/fondo\ mickey.jpg);
@@ -36,40 +34,6 @@ header{
 .fondo{
     background-color: rgb(228, 215, 226);
 }
-
-/* .kenburns-top{
-	-webkit-animation: kenburns-top 5s ease-out both;
-	animation: kenburns-top 5s ease-out both;
-}
-
-@-webkit-keyframes kenburns-top {
-    0% {
-        -webkit-transform: scale(1) translateY(0);
-        transform: scale(1) translateY(0);
-        -webkit-transform-origin: 50% 16%;
-        transform-origin: 50% 16%;
-    }
-    100% {
-        -webkit-transform: scale(1.25) translateY(-15px);
-        transform: scale(1.25) translateY(-15px);
-        -webkit-transform-origin: top;
-        transform-origin: top;
-    }
-}
-@keyframes kenburns-top {
-    0% {
-        -webkit-transform: scale(1) translateY(0);
-        transform: scale(1) translateY(0);
-        -webkit-transform-origin: 50% 16%;
-        transform-origin: 50% 16%;
-    }
-    100% {
-    -webkit-transform: scale(1.25) translateY(-15px);
-    transform: scale(1.25) translateY(-15px);
-    -webkit-transform-origin: top;
-    transform-origin: top;
-    }
-}   */
 
 /* LOGO */
 .encabezado__logo{
@@ -102,19 +66,22 @@ header{
 /* NAVBAR */
 
 .navegacion{
+    width: 100%;
     font-family: maliBold;
-    padding: 10px;
+    padding: 15px;
     background-color: #E9C8EC;
     border: solid 5px rgb(214, 182, 188);
     border-radius: 15px;
+}
+.margin{
+    margin-left: 6%;
 }
 .navegacion a{
     font-size: 15px;
 }
 .navegacion a:hover{
     background-image: linear-gradient(white, rgb(214, 182, 188));
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 10px;
 }
 
 .navegacion ul{
@@ -124,6 +91,8 @@ header{
 .noitem{
     list-style: none;
 }
+
+
 /* TEXTO INDEX */
 .texto{
     text-align: justify;
@@ -181,7 +150,6 @@ h2{
 }
 
 .sitios{
-    grid-area: sitios;
     background-image: url(../images/fondo\ mickey.jpg);
     border-radius: 15px;
     padding: 10px;
@@ -341,25 +309,14 @@ h2{
     background-image: linear-gradient(to left,darkslateblue, rgb(214, 182, 188));
     border: 0px;
 }
-
+.espacio{
+    margin-left: 3%;
+}
 .padding{
     padding: 10px;
     margin: 10px;
 }
-.cardOtras{
-    background-color: #FFFAE4;
-    border-radius: 15px;
-    padding: 50px;
-    border: crimson 3px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 8px;
-    text-align: justify;
-}
-.cardOtras p{
-    font-size: 14px;
-}
+
 
 /*PÁG. FORMULARIO DE CONTACTO*/
 
@@ -402,11 +359,80 @@ p{
     font-size: 16px;
 }
 
+.fondoContacto{
+    margin: 0px;
+    padding: 0px;
+    background-image: url(../images/disney-globos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* MEDIA QUERIES 768 */
+
+@media (max-width: 768px){
+    
+    /* LOGO */
+    .encabezado__logo{
+        margin: 40px 330px;
+}
+
+    /* TITULO */
+    .encabezado__titulo{
+        margin: 20px 200px;
+        font-size: 50px;
+}
+
+    .card__lista li a{
+        font-size: 14px;
+}
+    
+    /* INDEX */
+
+    .pfooter{
+        font-size: 11px;
+        width: 100%;
+    }
+
+    .texto{
+        font-size: 12px;
+    }
+    /* PÁGINA TICKETS Y HOTELES */
+    
+    .carrusel{
+        margin-left: 4%;
+        width: 600px;
+        height: 420px;
+        margin: 10px;
+    }
+
+    /* PÁGINA OTRAS ACTIVIDADES */
+
+    .otrasAct{
+        margin-left: 10%;
+    }
+    .img__otrasActividades{
+        margin-left: 2%;
+        overflow: hidden;
+    }
+
+}
 
 /* MEDIA QUERIES 320PX */
 
 @media (max-width: 320px){
     /* INDEX */
+        /* LOGO */
+        .encabezado__logo{
+            margin: 40px 135px;
+    }
+    
+        /* TITULO */
+        .encabezado__titulo{
+            margin: 20px 90px;
+            font-size: 40px;
+    }
+
     .contenedor{
         grid-template-areas:"video video"
                             "texto texto"
@@ -417,6 +443,11 @@ p{
         grid-row-gap: 10px;
         grid-column-gap: 10px;
     }
+
+    p{
+        font-size: 14px;
+    }
+
     .navegacion{
         margin-left: 0%;
     }
@@ -427,7 +458,7 @@ p{
     }
     .texto{
         grid-area: texto;
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .video iframe{
@@ -469,30 +500,30 @@ p{
 
     /* PÁGINA TICKETS Y HOTELES */
 
-.tabla1{
-    margin-top: 70px;
-}
-.tablaTyh{
-    font-family: maliLight;
-    font-size: 15px;
-    border-radius: 10px;
-    border: double 5px darkslateblue;
-    background-color: rgb(250, 242, 250);
-    color:darkslateblue;
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
-    height: 500px;
-}
+    .tabla1{
+        margin-top: 70px;
+    }
+    .tablaTyh{
+        font-family: maliLight;
+        font-size: 15px;
+        border-radius: 10px;
+        border: double 5px darkslateblue;
+        background-color: rgb(250, 242, 250);
+        color:darkslateblue;
+        text-align: center;
+        padding: 20px;
+        margin-top: 10px;
+        height: 500px;
+    }
 
-.carrusel{
-    width: 450px;
-    height: 200px;
-    margin: 0px;
-    background-color: gray;
-    padding: 15px;
-    border-radius: 15px;
-}
+    .carrusel{
+        width: 450px;
+        height: 200px;
+        margin: 10px;
+        background-color: gray;
+        padding: 15px;
+        border-radius: 15px;
+    }
 
 
 }
