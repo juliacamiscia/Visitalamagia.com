@@ -1,0 +1,147 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: lobster;
+  src: url(../fonts/Lobster-Regular.ttf); }
+
+@font-face {
+  font-family: maliExtraLight;
+  src: url(../fonts/Mali-ExtraLight.ttf); }
+
+@font-face {
+  font-family: maliLight;
+  src: url(../fonts/Mali-Light.ttf); }
+
+@font-face {
+  font-family: maliSemiBold;
+  src: url(../fonts/Mali-SemiBold.ttf); }
+
+@font-face {
+  font-family: maliBold;
+  src: url(../fonts/Mali-Bold.ttf); }
+
+header {
+  background-image: url("../../images/fondomickey.jpg"); }
+
+.fondo {
+  background-color: #e4d7e2; }
+
+.encabezado__logo {
+  display: inline-block;
+  border: dotted 3px black;
+  border-radius: 200px;
+  margin: 40px 50px;
+  width: 100px;
+  height: 100px;
+  transition: 4s; }
+  .encabezado__logo:hover {
+    width: 130px;
+    height: 130px;
+    box-shadow: 5px 5px 5px gray; }
+
+.encabezado__titulo {
+  display: inline-block;
+  margin: 20px 180px;
+  padding: 20px 20px;
+  width: 50%;
+  font-family: lobster;
+  font-size: 60px;
+  background-image: linear-gradient(to left, white, #e4d7e2);
+  border-radius: 15px;
+  text-align: center; }
+
+.navegacion {
+  width: 100%;
+  font-family: maliBold;
+  padding: 15px;
+  background-color: #E9C8EC;
+  border: solid 5px #d6b6bc;
+  border-radius: 15px; }
+  .navegacion ul {
+    background-color: #E9C8EC; }
+  .navegacion a {
+    font-size: 15px; }
+    .navegacion a:hover {
+      background-image: linear-gradient(white, #d6b6bc);
+      border-radius: 10px; }
+
+.margin {
+  margin-left: 6%; }
+
+.noitem {
+  list-style: none; }
+
+h3 {
+  font-family: lobster;
+  font-size: 20px;
+  color: #FFFAE4;
+  text-align: center;
+  background-color: darkslateblue;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 5px; }
+
+h2 {
+  display: block;
+  font-family: lobster;
+  font-size: 24px;
+  color: #070707;
+  text-align: center;
+  padding: 8px; }
+
+.pfooter {
+  font-family: maliLight;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  background-color: #E9C8EC;
+  padding: 20px; }
+
+.texto {
+  text-align: justify;
+  font-family: maliLight;
+  font-size: 18px; }
+
+.tabla {
+  font-family: maliLight;
+  font-size: 15px;
+  border-radius: 10px;
+  border: double 5px crimson;
+  background-color: #faf2fa;
+  color: darkslateblue;
+  text-align: center;
+  padding: 5px; }
+
+.card__lista li {
+  list-style-type: none; }
+  .card__lista li a {
+    font-family: maliLight;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: #beabcf;
+    border-radius: 5px;
+    text-decoration: none;
+    list-style-type: none; }
+
+.sitios {
+  background-image: url("../../images/fondomickey.jpg");
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.publi {
+  grid-area: publi;
+  background-image: url("../../images/fondomickey.jpg");
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; }

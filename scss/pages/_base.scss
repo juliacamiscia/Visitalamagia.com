@@ -1,0 +1,27 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: lobster;
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face{
+    font-family: maliExtraLight;
+    src: url(../fonts/Mali-ExtraLight.ttf);
+}
+@font-face {
+    font-family: maliLight;
+    src: url(../fonts/Mali-Light.ttf);
+}
+@font-face {
+    font-family: maliSemiBold;
+    src: url(../fonts/Mali-SemiBold.ttf);
+}
+@font-face {
+    font-family: maliBold;
+    src: url(../fonts/Mali-Bold.ttf);
+}

@@ -1,0 +1,51 @@
+.texto{
+    text-align: justify;
+    font-family:maliLight;
+    font-size: 18px;
+}
+
+.tabla{
+    font-family: maliLight;
+    font-size: 15px;
+    border-radius: 10px;
+    border: double 5px crimson;
+    background-color: rgb(250, 242, 250);
+    color: $colorSecundario;
+    text-align: center;
+    padding: 5px;
+}
+
+.card__lista li{
+    list-style-type: none;
+        a{
+            font-family: maliLight;
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            background-color: rgb(190, 171, 207);
+            border-radius: 5px;
+            text-decoration: none;
+            list-style-type: none;
+}
+}
+
+.sitios{
+    background-image: url("../../images/fondomickey.jpg");
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.publi{
+    grid-area: publi;
+    background-image: url("../../images/fondomickey.jpg");
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

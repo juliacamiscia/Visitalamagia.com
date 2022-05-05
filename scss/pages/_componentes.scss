@@ -1,0 +1,89 @@
+header{
+    background-image: url("../../images/fondomickey.jpg");
+}
+.fondo{
+    background-color: $colorPrincipal;
+}
+
+.encabezado__logo{
+    display: inline-block;
+    border: dotted 3px black;
+    border-radius: 200px;
+    margin: 40px 50px;
+    width: 100px;
+    height: 100px;
+    transition: 4s;
+    &:hover {
+        width: 130px;
+        height: 130px;
+        box-shadow: 5px 5px 5px gray;}
+}
+
+.encabezado__titulo{
+    display: inline-block;
+    margin: 20px 180px;
+    padding: 20px 20px;
+    width: 50%;
+    font-family: lobster;
+    font-size: 60px;
+    background-image: linear-gradient(to left, white, rgb(228, 215, 226));
+    border-radius: 15px;
+    text-align: center;
+}
+
+.navegacion{
+    width: 100%;
+    font-family: maliBold;
+    padding: 15px;
+    background-color: #E9C8EC;
+    border: solid 5px rgb(214, 182, 188);
+    border-radius: 15px;
+
+    ul{
+        background-color: #E9C8EC;
+    }
+
+    a{
+        font-size: 15px;
+        &:hover{
+            background-image: linear-gradient(white, rgb(214, 182, 188));
+            border-radius: 10px;
+        }
+    }
+}
+.margin{
+    margin-left: 6%;
+}
+
+.noitem{
+    list-style: none;
+}
+
+h3{
+    font-family: lobster;
+    font-size: 20px;
+    color:  #FFFAE4;
+    text-align: center;
+    background-color: $colorSecundario;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+h2{
+    display:block;
+    font-family: lobster;
+    font-size: 24px;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 8px;
+}
+
+.pfooter{
+    font-family: maliLight;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    background-color:#E9C8EC;
+    padding: 20px;
+}
