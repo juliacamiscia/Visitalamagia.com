@@ -59,6 +59,14 @@ header{
     list-style: none;
 }
 
+h2{
+    display:block;
+    font-family: lobster;
+    font-size: 24px;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 8px;
+}
 h3{
     font-family: lobster;
     font-size: 20px;
@@ -68,15 +76,6 @@ h3{
     display: inline-block;
     padding: 8px;
     border-radius: 5px;
-}
-
-h2{
-    display:block;
-    font-family: lobster;
-    font-size: 24px;
-    color: rgb(7, 7, 7);
-    text-align: center;
-    padding: 8px;
 }
 
 .pfooter{

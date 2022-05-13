@@ -5,23 +5,23 @@
 
 @font-face {
   font-family: lobster;
-  src: url(../fonts/Lobster-Regular.ttf); }
+  src: url(../../fonts/Lobster-Regular.ttf); }
 
 @font-face {
   font-family: maliExtraLight;
-  src: url(../fonts/Mali-ExtraLight.ttf); }
+  src: url(../../fonts/Mali-ExtraLight.ttf); }
 
 @font-face {
   font-family: maliLight;
-  src: url(../fonts/Mali-Light.ttf); }
+  src: url(../../fonts/Mali-Light.ttf); }
 
 @font-face {
   font-family: maliSemiBold;
-  src: url(../fonts/Mali-SemiBold.ttf); }
+  src: url(../../fonts/Mali-SemiBold.ttf); }
 
 @font-face {
   font-family: maliBold;
-  src: url(../fonts/Mali-Bold.ttf); }
+  src: url(../../fonts/Mali-Bold.ttf); }
 
 header {
   background-image: url("../../images/fondomickey.jpg"); }
@@ -74,6 +74,14 @@ header {
 .noitem {
   list-style: none; }
 
+h2 {
+  display: block;
+  font-family: lobster;
+  font-size: 24px;
+  color: #070707;
+  text-align: center;
+  padding: 8px; }
+
 h3 {
   font-family: lobster;
   font-size: 20px;
@@ -84,14 +92,6 @@ h3 {
   padding: 8px;
   border-radius: 5px; }
 
-h2 {
-  display: block;
-  font-family: lobster;
-  font-size: 24px;
-  color: #070707;
-  text-align: center;
-  padding: 8px; }
-
 .pfooter {
   font-family: maliLight;
   font-size: 14px;
@@ -100,33 +100,42 @@ h2 {
   background-color: #E9C8EC;
   padding: 20px; }
 
+/* MIXIN */
 .texto {
   text-align: justify;
   font-family: maliLight;
-  font-size: 18px; }
+  font-size: 18px;
+  color: black; }
 
-.tabla {
-  font-family: maliLight;
+/* EXTEND */
+.tabla, .tabla--tyh {
   font-size: 15px;
-  border-radius: 10px;
-  border: double 5px crimson;
-  background-color: #faf2fa;
   color: darkslateblue;
+  font-family: maliLight;
+  border-radius: 10px;
+  border: double 5px darkslateblue;
+  background-color: #faf2fa;
   text-align: center;
   padding: 5px; }
+
+.tabla--tyh {
+  padding: 20px;
+  margin-top: 10px;
+  height: 500px; }
 
 .card__lista li {
   list-style-type: none; }
   .card__lista li a {
-    font-family: maliLight;
     font-size: 20px;
-    text-align: center;
     color: black;
+    font-family: maliLight;
+    text-align: center;
     background-color: #beabcf;
     border-radius: 5px;
     text-decoration: none;
     list-style-type: none; }
 
+/* MAP GET */
 .sitios {
   background-image: url("../../images/fondomickey.jpg");
   border-radius: 15px;
