@@ -47,7 +47,7 @@
 $estilos:(borde: 15px, padd: 10px,center:center);
 
 .sitios{
-    background-image: url("../../images/fondomickey.jpg");
+    background-image: url("../images/fondomickey.jpg");
     border-radius: map-get($estilos, borde);
     padding: map-get($estilos, padd);
     display: flex;
@@ -58,7 +58,7 @@ $estilos:(borde: 15px, padd: 10px,center:center);
 
 .publi{
     grid-area: publi;
-    background-image: url("../../images/fondomickey.jpg");
+    background-image: url("../images/fondomickey.jpg");
     border-radius: map-get($estilos, borde);
     display: flex;
     flex-direction: row;
@@ -71,27 +71,27 @@ $estilos:(borde: 15px, padd: 10px,center:center);
 /*EFECTO PARALLAX*/
 
 .img-uno{
-    background-image: url("../../images/Magic\ Kingdom1.jpg");
+    background-image: url("../images/Magic\ Kingdom1.jpg");
     margin-top: 15px;
 }
 .img-dos{
-    background-image: url("../../images/Animal\ Kingdom.png");
+    background-image: url("../images/Animal\ Kingdom.png");
 }
 .img-tres{
-    background-image: url("../../images/Epcot.jpg");
+    background-image: url("../images/Epcot.jpg");
 }
 .img-cuatro{
-    background-image: url("../../images/Hollywood\ Studios1.jpg");
+    background-image: url("../images/Hollywood\ Studios1.jpg");
 }
 .img-cinco{
-    background-image: url("../../images/universal-tarjeta.jpg");
+    background-image: url("../images/universal-tarjeta.jpg");
     margin-top: 15px;
 }
 .img-seis{
-    background-image: url("../../images/Islands\ of\ Adventure.png");
+    background-image: url("../images/Islands\ of\ Adventure.png");
 }
 .img-siete{
-    background-image: url("../../images/volcanobay5.jpg")
+    background-image: url("../images/volcanobay5.jpg")
 }
 
 .texto__interior{

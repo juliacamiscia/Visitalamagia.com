@@ -6,26 +6,26 @@
 
 @font-face {
   font-family: lobster;
-  src: url(../../fonts/Lobster-Regular.ttf); }
+  src: url(../fonts/Lobster-Regular.ttf); }
 
 @font-face {
   font-family: maliExtraLight;
-  src: url(../../fonts/Mali-ExtraLight.ttf); }
+  src: url(../fonts/Mali-ExtraLight.ttf); }
 
 @font-face {
   font-family: maliLight;
-  src: url(../../fonts/Mali-Light.ttf); }
+  src: url(../fonts/Mali-Light.ttf); }
 
 @font-face {
   font-family: maliSemiBold;
-  src: url(../../fonts/Mali-SemiBold.ttf); }
+  src: url(../fonts/Mali-SemiBold.ttf); }
 
 @font-face {
   font-family: maliBold;
-  src: url(../../fonts/Mali-Bold.ttf); }
+  src: url(../fonts/Mali-Bold.ttf); }
 
 header {
-  background-image: url("../../images/fondomickey.jpg"); }
+  background-image: url("../images/fondomickey.jpg"); }
 
 .fondo {
   background-color: #e4d7e2; }
@@ -103,7 +103,7 @@ h3 {
   margin-bottom: 0px;
   margin-top: 50px; }
 
-/* MEDIA QUERIES 320PX */
+/* MEDIA QUERIES 360PX */
 @media only screen and (max-width: 360px) {
   .navegacion {
     overflow: hidden; }
@@ -170,7 +170,7 @@ h3 {
 
 /* MAP GET */
 .sitios {
-  background-image: url("../../images/fondomickey.jpg");
+  background-image: url("../images/fondomickey.jpg");
   border-radius: 15px;
   padding: 10px;
   display: flex;
@@ -180,7 +180,7 @@ h3 {
 
 .publi {
   grid-area: publi;
-  background-image: url("../../images/fondomickey.jpg");
+  background-image: url("../images/fondomickey.jpg");
   border-radius: 15px;
   display: flex;
   flex-direction: row;
@@ -191,27 +191,27 @@ h3 {
 /* PÁGINAS DISNEY Y UNIVERSAL */
 /*EFECTO PARALLAX*/
 .img-uno {
-  background-image: url("../../images/Magic Kingdom1.jpg");
+  background-image: url("../images/Magic Kingdom1.jpg");
   margin-top: 15px; }
 
 .img-dos {
-  background-image: url("../../images/Animal Kingdom.png"); }
+  background-image: url("../images/Animal Kingdom.png"); }
 
 .img-tres {
-  background-image: url("../../images/Epcot.jpg"); }
+  background-image: url("../images/Epcot.jpg"); }
 
 .img-cuatro {
-  background-image: url("../../images/Hollywood Studios1.jpg"); }
+  background-image: url("../images/Hollywood Studios1.jpg"); }
 
 .img-cinco {
-  background-image: url("../../images/universal-tarjeta.jpg");
+  background-image: url("../images/universal-tarjeta.jpg");
   margin-top: 15px; }
 
 .img-seis {
-  background-image: url("../../images/Islands of Adventure.png"); }
+  background-image: url("../images/Islands of Adventure.png"); }
 
 .img-siete {
-  background-image: url("../../images/volcanobay5.jpg"); }
+  background-image: url("../images/volcanobay5.jpg"); }
 
 .texto__interior {
   font-family: maliLight;

@@ -1,5 +1,5 @@
 header{
-    background-image: url("../../images/fondomickey.jpg");
+    background-image: url("../images/fondomickey.jpg");
 }
 .fondo{
     background-color: $colorPrincipal;
@@ -89,7 +89,7 @@ h3{
     margin-top: 50px;
 }
 
-/* MEDIA QUERIES 320PX */
+/* MEDIA QUERIES 360PX */
 @media only screen and (max-width: 360px){
     .navegacion{
         overflow: hidden;
