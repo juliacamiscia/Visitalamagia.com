@@ -1,0 +1,385 @@
+/* INDEX */
+/* MIXIN */
+@mixin sizetexto ($tamaño, $color){
+    font-size: $tamaño;    
+    color: $color;
+}
+
+.texto{
+    text-align: justify;
+    font-family:maliLight;
+    @include sizetexto (18px, black);
+}
+
+/* EXTEND */
+.tabla{
+    @include sizetexto(15px, $colorSecundario);
+    font-family: maliLight;
+    border-radius: 10px;
+    border: double 5px $colorSecundario;
+    background-color: rgb(250, 242, 250);
+    text-align: center;
+    padding: 5px;
+}
+
+.tabla--tyh{
+    @extend .tabla;
+    padding: 20px;
+    margin-top: 10px;
+    height: 500px;
+}
+
+.card__lista li{
+    list-style-type: none;
+        a{
+            @include sizetexto(20px, black);
+            font-family: maliLight;
+            text-align: center;
+            background-color: rgb(190, 171, 207);
+            border-radius: 5px;
+            text-decoration: none;
+            list-style-type: none;
+}
+}
+
+/* MAP GET */
+
+$estilos:(borde: 15px, padd: 10px,center:center);
+
+.sitios{
+    background-image: url("../../images/fondomickey.jpg");
+    border-radius: map-get($estilos, borde);
+    padding: map-get($estilos, padd);
+    display: flex;
+    flex-direction: column;
+    justify-content: map-get($estilos, center);
+    align-items: map-get($estilos, center);
+}
+
+.publi{
+    grid-area: publi;
+    background-image: url("../../images/fondomickey.jpg");
+    border-radius: map-get($estilos, borde);
+    display: flex;
+    flex-direction: row;
+    justify-content: map-get($estilos, center);
+    align-items: map-get($estilos, center);
+    padding: map-get($estilos, padd);
+}
+
+/* PÁGINAS DISNEY Y UNIVERSAL */
+/*EFECTO PARALLAX*/
+
+.img-uno{
+    background-image: url("../../images/Magic\ Kingdom1.jpg");
+    margin-top: 15px;
+}
+.img-dos{
+    background-image: url("../../images/Animal\ Kingdom.png");
+}
+.img-tres{
+    background-image: url("../../images/Epcot.jpg");
+}
+.img-cuatro{
+    background-image: url("../../images/Hollywood\ Studios1.jpg");
+}
+.img-cinco{
+    background-image: url("../../images/universal-tarjeta.jpg");
+    margin-top: 15px;
+}
+.img-seis{
+    background-image: url("../../images/Islands\ of\ Adventure.png");
+}
+.img-siete{
+    background-image: url("../../images/volcanobay5.jpg")
+}
+
+.texto__interior{
+    font-family: maliLight;
+    font-size: 16px;
+    text-align: map-get($estilos, center);
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 10px;
+}
+.parallax{
+    background-attachment: fixed;
+    background-position: map-get($estilos, center);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    max-width: 100%;
+    position: relative;
+}
+
+.titulo h3{
+    font-family: lobster;
+    font-size: 22px;
+    background-color: $colorSecundario;
+    padding: 18px;
+    display: inline;
+    border-radius: map-get($estilos, borde);
+}
+
+/* PÁGINA TICKETS Y HOTELES */
+
+.tabla1{
+    margin-top: 70px;
+}
+
+.tickets{
+    text-align: justify;
+    padding: 20px;
+}
+
+.hoteles{
+    text-align: justify;
+    padding: 20px;
+    margin: 10px;
+}
+
+.carrusel{
+    width: 600px;
+    height: 450px;
+    margin-left: 370px;
+    margin-top: 20px;
+    background-image: linear-gradient(rgb(241, 229, 253), rgb(184, 178, 223), rgb(204, 203, 204), rgb(241, 229, 253), rgb(165, 156, 224));
+    padding: 15px;
+    border-radius: map-get($estilos, borde);
+}
+
+/* PÁGINA OTRAS ACTIVIDADES */
+
+.otrasAct{
+    margin: 20px;
+}
+.img__otrasActividades{
+    margin-bottom: 30px;
+    border-radius: map-get($estilos, borde);
+    margin-left: 250px;
+}
+
+.cardsTexto{
+    font-family: maliLight;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: map-get($estilos, center);
+    text-align: justify;
+}
+
+.textoOtras{
+    font-family: maliLight;
+    font-size: 16px;
+    text-align: map-get($estilos, center);
+}
+.botonCentrado{
+    display: block;
+}
+.botonChico{
+    margin-left: 100px;
+    box-shadow: 5px;
+    background-image: linear-gradient(to left, $colorSecundario, rgb(214, 182, 188));
+    border: 0px;
+    font-size: 12px ;
+}
+.espacio{
+    margin-left: 3%;
+}
+.padding{
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/*PÁG. FORMULARIO DE CONTACTO*/
+
+.img__formulario{
+    margin-left: 20%;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 900px;
+    height: 600px;
+}
+
+.formulario{
+    padding: 20px;
+    font-family: maliSemiBold;
+    font-size: 14px;
+    color: $colorSecundario;
+    background-image: linear-gradient(to left, rgb(84, 76, 141), rgb(214, 182, 188), rgb(248, 243, 253));
+    border: solid 4px rgb(190, 171, 207);
+    border-radius: map-get($estilos, borde);
+    margin-top: 5%;
+    display: inline-block;
+    margin-left: 25%;
+}
+
+label{
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+}
+textarea{
+    display: block;
+    padding: 5%;
+    height:200px;
+    width: 500px;
+}
+input{
+    height: 20px;
+}
+p{
+    font-family: maliLight;
+    font-size: 16px;
+}
+
+/* MEDIA QUERIES 360PX */
+@media only screen and (max-width: 360px){
+
+    /* INDEX */
+    .contenedor{
+        grid-template-areas:"video"
+                            "texto"
+                            "tabla"
+                            "sitios"
+                            "publi"
+                            "footer";
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .texto{
+        grid-area: texto;
+        font-size: 14px;
+    }
+
+    .video iframe{
+        grid-area: video;
+        width: 300px;
+        height: 200px;
+        margin-left: 0px;
+        overflow: hidden;
+    }
+    .card__lista li a{
+        font-family: maliLight;
+        font-size: 12px;
+    }
+    .publi img{
+        width: 150px;
+        height: 100px;
+    }
+    .tabla{
+        grid-area: tabla;
+        font-size: 12px;
+        padding: 0px;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        margin-left: 0px;
+    }
+    .tabla1{
+        margin: 0px;
+    }
+    .sitios{
+        grid-area: sitios;
+        margin: 0px;
+        margin-left: 40px;
+        padding: 0px;
+        overflow: hidden;
+        width: 250px;
+        height: 150px;
+    }
+    .publi{
+        grid-area: publi;
+        margin: 0px;
+        margin-left: 40px;
+        overflow: hidden;
+        width: 250px;
+        height: 150px;
+    }
+
+    /* DISNEY Y UNIVERSAL */
+    .texto__interior{
+        font-size: 12px;
+        text-align: center;
+    }
+    .titulo h3{
+        font-size: 14px;
+    }
+
+    /* PÁGINA TICKETS Y HOTELES */
+
+    .tabla1{
+        margin-top: 5px;
+    }
+    .carrusel{
+        width: 450px;
+        height: 250px;
+        margin: 10px;
+        background-color: gray;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    /* PÁGINA OTRAS ACTIVIDADES */
+
+    .img__otrasActividades{
+        margin-bottom: 30px;
+        margin-left: 2px;
+    }
+    
+    .cardsTexto{
+        font-size: 13px;
+    }
+    
+    .textoOtras{
+        font-size: 14px;
+    }
+
+    .botonChico{
+        margin-left: 87px;
+    }
+    .espacio{
+        margin-left: 0%;
+    }
+    .padding{
+        padding: 10px;
+        margin-left: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /* PÁG. FORMULARIO DE CONTACTO */
+    .img__formulario{
+        margin-left: 50px;
+        width: 70%;
+        height: 50%;
+    }
+    .formulario{
+        width: 80%;
+        padding: 20px;
+        font-size: 10px;
+        margin-top: 5%;
+        margin-left: 10%;
+        background-image: linear-gradient(to left, rgb(214, 182, 188), rgb(248, 243, 253));
+    }
+    
+    label{
+        padding: 10px;
+        font-size: 10px;
+    }
+    textarea{
+        padding: 5%;
+        height: 150px;
+        width: 250px;
+    }
+    input{
+        height: 20px;
+    }
+
+}

@@ -270,7 +270,7 @@ h2{
     height: 450px;
     margin-left: 370px;
     margin-top: 20px;
-    background-color: gray;
+    background-image: linear-gradient(rgb(241, 229, 253), rgb(184, 178, 223), rgb(204, 203, 204));
     padding: 15px;
     border-radius: 15px;
 }

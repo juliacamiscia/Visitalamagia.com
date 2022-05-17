@@ -85,4 +85,45 @@ h3{
     text-align: center;
     background-color:#E9C8EC;
     padding: 20px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+/* MEDIA QUERIES 320PX */
+@media only screen and (max-width: 360px){
+    .navegacion{
+        overflow: hidden;
+            a{
+                font-size: 12px;
+                display: block;
+                text-align: center;
+                    &:hover{
+                        background-image: linear-gradient(white, rgb(214, 182, 188));
+                        border-radius: 10px;
+                    }
+            }
+    }
+        /* INDEX */
+        /* LOGO */
+    .encabezado__logo{
+        margin: 5px 10px;
+        width: 80px;
+        height: 80px;
+    }
+    
+        /* TITULO */
+    .encabezado__titulo{
+        margin: 20px 10px;
+        font-size: 35px;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+    .pfooter{
+        display: inline-block;
+        font-size: 9px;
+        margin-top: 7px;
+        width: 100%;
+    }
 }
