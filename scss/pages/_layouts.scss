@@ -76,6 +76,7 @@ $estilos:(borde: 15px, padd: 10px,center:center);
 }
 .img-dos{
     background-image: url("../images/Animal\ Kingdom.png");
+    margin-top: 15px;
 }
 .img-tres{
     background-image: url("../images/Epcot.jpg");
@@ -121,6 +122,55 @@ $estilos:(borde: 15px, padd: 10px,center:center);
     border-radius: map-get($estilos, borde);
 }
 
+.lado{
+    display: inline;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.location{
+    display: inline-block;
+}
+
+.fondo{
+    background-color: rgba(253, 242, 242, 0.712);
+}
+
+.estiloAcordeon{
+    background-color: $colorPrincipal;
+    border-color: white;
+    color: $colorSecundario;
+    font-size: 18px;
+    h2{
+        background-color: $colorPrincipal;
+        &:hover{
+            background-image: linear-gradient(rgb(241, 229, 253), rgb(184, 178, 223), rgb(204, 203, 204), rgb(241, 229, 253), rgb(165, 156, 224));
+        }
+    }        
+}
+
+.cardDisney{
+    border-radius: 20px;
+    background-color:rgb(255, 255, 248);
+    img{
+        border-radius: 15px;
+    }
+    li{
+        font-size: 15px;
+    }
+    .lugar{
+        font-family: maliSemibold;
+    }
+    p{
+        text-align: justify;
+    }
+}
+
+.bold{
+    font-family: maliSemiBold;
+}
 /* PÁGINA TICKETS Y HOTELES */
 
 .tabla1{
@@ -233,7 +283,11 @@ p{
     font-family: maliLight;
     font-size: 16px;
 }
+.fontFamily{
+    font-family: maliLight;
+    font-size: 16px;
 
+}
 /* MEDIA QUERIES 360PX */
 @media only screen and (max-width: 360px){
 
@@ -382,4 +436,9 @@ p{
         height: 20px;
     }
 
+    .tamañoLetra{
+        strong, li, div, em{
+            font-size: 14px;
+        }
+    }
 }

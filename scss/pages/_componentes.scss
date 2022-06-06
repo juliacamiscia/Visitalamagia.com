@@ -86,7 +86,24 @@ h3{
     background-color:#E9C8EC;
     padding: 20px;
     margin-bottom: 0px;
-    margin-top: 50px;
+    // margin-top: 50px;
+    a{
+        text-decoration: none;
+        color: black;
+        font-family: maliBold;
+        &:hover{
+            color: #E9C8EC;
+            background-color: $colorSecundario;
+        }
+    }
+}
+
+.botonBusqueda{
+    background-color: #E9C8EC;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* MEDIA QUERIES 360PX */
@@ -122,7 +139,7 @@ h3{
     }
     .pfooter{
         display: inline-block;
-        font-size: 9px;
+        font-size: 10px;
         margin-top: 7px;
         width: 100%;
     }

@@ -100,8 +100,21 @@ h3 {
   text-align: center;
   background-color: #E9C8EC;
   padding: 20px;
-  margin-bottom: 0px;
-  margin-top: 50px; }
+  margin-bottom: 0px; }
+  .pfooter a {
+    text-decoration: none;
+    color: black;
+    font-family: maliBold; }
+    .pfooter a:hover {
+      color: #E9C8EC;
+      background-color: darkslateblue; }
+
+.botonBusqueda {
+  background-color: #E9C8EC;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /* MEDIA QUERIES 360PX */
 @media only screen and (max-width: 360px) {
@@ -128,7 +141,7 @@ h3 {
     grid-area: footer; }
   .pfooter {
     display: inline-block;
-    font-size: 9px;
+    font-size: 10px;
     margin-top: 7px;
     width: 100%; } }
 
@@ -195,7 +208,8 @@ h3 {
   margin-top: 15px; }
 
 .img-dos {
-  background-image: url("../images/Animal Kingdom.png"); }
+  background-image: url("../images/Animal Kingdom.png");
+  margin-top: 15px; }
 
 .img-tres {
   background-image: url("../images/Epcot.jpg"); }
@@ -237,6 +251,45 @@ h3 {
   padding: 18px;
   display: inline;
   border-radius: 15px; }
+
+.lado {
+  display: inline;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.location {
+  display: inline-block; }
+
+.fondo {
+  background-color: rgba(253, 242, 242, 0.712); }
+
+.estiloAcordeon {
+  background-color: #e4d7e2;
+  border-color: white;
+  color: darkslateblue;
+  font-size: 18px; }
+  .estiloAcordeon h2 {
+    background-color: #e4d7e2; }
+    .estiloAcordeon h2:hover {
+      background-image: linear-gradient(#f1e5fd, #b8b2df, #cccbcc, #f1e5fd, #a59ce0); }
+
+.cardDisney {
+  border-radius: 20px;
+  background-color: #fffff8; }
+  .cardDisney img {
+    border-radius: 15px; }
+  .cardDisney li {
+    font-size: 15px; }
+  .cardDisney .lugar {
+    font-family: maliSemibold; }
+  .cardDisney p {
+    text-align: justify; }
+
+.bold {
+  font-family: maliSemiBold; }
 
 /* PÁGINA TICKETS Y HOTELES */
 .tabla1 {
@@ -334,6 +387,10 @@ input {
   height: 20px; }
 
 p {
+  font-family: maliLight;
+  font-size: 16px; }
+
+.fontFamily {
   font-family: maliLight;
   font-size: 16px; }
 
@@ -439,4 +496,6 @@ p {
     height: 150px;
     width: 250px; }
   input {
-    height: 20px; } }
+    height: 20px; }
+  .tamañoLetra strong, .tamañoLetra li, .tamañoLetra div, .tamañoLetra em {
+    font-size: 14px; } }
