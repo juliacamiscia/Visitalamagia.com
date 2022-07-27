@@ -3,7 +3,7 @@ let apellidoIngresado = prompt("Ingrese su apellido:");
 let edad = parseInt(prompt("Ingrese su edad:"));
 
 if((nombreIngresado !="") && (apellidoIngresado !="")){
-    alert("¡ Bienvenido " + nombreIngresado + " " + apellidoIngresado + " !");
+    alert("¡ Bienvenido/a " + nombreIngresado + " " + apellidoIngresado + " !");
 }
 
 else{
@@ -20,13 +20,7 @@ const destinoUniversal = new Destino ("Universal", 10000);
 
 let listaDestinos = [destinoDisney, destinoUniversal];
 
-let nombresDestinos = []
-function nombrarDestinos(){
-    for (const destino of listaDestinos){
-        nombresDestinos.push(destino.nombre)
-    }
-} 
-nombrarDestinos()
+let nombresDestinos = listaDestinos.map((destino) => destino.nombre)
 
 let precioTotal = 0;
 function calculoPrecio (cantidad, precio){
