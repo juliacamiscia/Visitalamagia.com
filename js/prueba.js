@@ -10,15 +10,34 @@ else{
     alert("Error: Ingresar nombre y apellido")
 }
 
-function Destino (nombre, precio){
+function Destino (nombre, precio, imagen){
     this.nombre = nombre;
     this.precio = precio;
+    this.imagen = imagen;
 }
 
-const destinoDisney = new Destino ("Disney", 12000);
-const destinoUniversal = new Destino ("Universal", 10000);
+const destinoDisney = new Destino ("Disney", 12000, "images/CinderellaCastle.jpg");
+const destinoUniversal = new Destino ("Universal", 10000, "images/universal.jpg");
 
 let listaDestinos = [destinoDisney, destinoUniversal];
+
+
+for(const destino of listaDestinos){
+    let card = document.createElement("div");
+    card.style.backgroundColor="#E9C8EC";
+    card.style.textAlign="center";
+    card.style.margin="50px";
+
+    card.innerHTML = `<h3>${destino.nombre}</h3>
+                    <p> $${destino.precio} por día</p>
+                    <img src=${destino.imagen} width="450px" height="280px" alt="imagenDestino"</img>`
+
+    document.body.append(card);
+
+    if(edad < 18){
+        card.remove();
+    }
+}
 
 let nombresDestinos = listaDestinos.map((destino) => destino.nombre)
 
