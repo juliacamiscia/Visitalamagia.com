@@ -10,6 +10,7 @@
         <link rel="shortcut icon" a href="../images/logofavicon.jpg">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <link rel="stylesheet" href="../css/pruebacss.css">
     </head>
     <body class="fondo">
@@ -51,17 +52,17 @@
                 <fieldset>
                     <legend>Formulario de Contacto</legend>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="Nombre" class="respuestas">
+                    <input type="text" name="Nombre" id="formNombre">
                     <label for="edad">Edad:</label>
-                    <input type="number" name="Edad" id="edad" class="respuestas">
+                    <input type="number" name="Edad" id="edad">
                     <label for="sexo">Género:</label>
-                    <input type="radio" name="Sexo" class="respuestas" value="Masculino"> Masculino
-                    <input type="radio" name="Sexo" class="respuestas" value="Femenino"> Femenino
-                    <input type="radio" name="Sexo" class="respuestas" value="Otro" checked> Otro
+                    <input type="radio" name="Sexo" id="formSexoMasc" value="Masculino"> Masculino
+                    <input type="radio" name="Sexo" id="formSexoFem" value="Femenino"> Femenino
+                    <input type="radio" name="Sexo" id="formSexoOtro" value="Otro" checked> Otro
                     <label for="telefono">Número de teléfono:</label>
-                    <input type="number" name="Teléfono" class="respuestas">
+                    <input type="number" name="Teléfono" id="formTel">
                     <label for="email">E-mail</label>
-                    <input type="email" name="Email" class="respuestas">
+                    <input type="email" name="Email" id="formEmail">
                     <label for="viaje">¿Es la primera vez que viajas?</label>
                     <input type="radio" name="viaje" class="respuestas" value="Sí" checked> Sí
                     <input type="radio" name="viaje" class="respuestas" value="No"> No 
@@ -87,7 +88,7 @@
                     </select>
                     <label for="mensaje">Dejanos tu mensaje</label>
                     <textarea name="mensaje" class="respuestas" placeholder="Escribe tu mensaje aquí..."></textarea>
-                    <input type="submit" value="Enviar">
+                    <input type="submit" value="Enviar" id="botonSubmit">
                     <input type="reset" value="Limpiar los campos">
                     <button id="botonGuardado">Guardar datos</button>  
                 </fieldset>
@@ -110,6 +111,7 @@
         <script>
             AOS.init();
         </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="../js/bootstrap.bundle.min.js"></script>
         <script src="../js/dom.js"></script>
     </body>
