@@ -1,0 +1,12 @@
+[
+    {
+        "nombre":"Disney",
+        "precio":12000,
+        "imagen":"../images/CinderellaCastle.jpg"
+    },
+    {
+        "nombre":"Universal",
+        "precio":10000,
+        "imagen":"../images/universal.jpg"
+    }
+]

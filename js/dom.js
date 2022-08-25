@@ -1,3 +1,19 @@
+setTimeout(()=>{
+    Swal.fire({
+        title: '<strong>¡ Bienvenido !</strong>',
+        imageUrl: '../images/bienvenidos.gif',
+        imageWidth: 180,
+        imageHeight: 250,
+        imageAlt: 'bienvenidos',
+        html:
+            'Aquí podrás completar un <b>formulario </b>para que luego nos contactemos con vos.',
+        confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> Genial!',
+        confirmButtonAriaLabel: 'Thumbs up, great!',
+    })
+}, 4000)
+
+
 function Destino (nombre, precio, imagen){
     this.nombre = nombre;
     this.precio = precio;
@@ -29,46 +45,120 @@ let formEmail = document.getElementById("formEmail");
 
 let listaDatos = [formNombre, inputEdad.value, formSexoMasc.value, formSexoFem.value, formSexoOtro.value, formTel, formEmail];
 
+let botonLimpiar = document.getElementById("botonLimpiar");
+botonLimpiar.addEventListener ("click", mensajeLimpiar)
+
+function borrarForm(){
+    listaDatos.clear
+}
+
+function mensajeLimpiar(){
+    
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn',
+            cancelButton: 'btn'
+        },
+        buttonsStyling: true,
+    })
+    swalWithBootstrapButtons.fire({
+        title: '¿Estás seguro que quieres borrar todo?',
+        text: "Una vez eliminado no podrás recuperar el contenido",
+        imageUrl: '../images/minnieDuda3.gif',
+        imageWidth: 300,
+        imageHeight: 250,
+        imageAlt: 'MinnieDuda',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, deseo borrarlo',
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: '#bc65c4',
+        cancelButtonColor: 'rgb(84, 76, 141)',
+        reverseButtons: false,
+    }).then((result) => {
+        if (result.isConfirmed) {            
+            borrarForm(),
+            localStorage.clear(),
+
+            swalWithBootstrapButtons.fire(
+                '¡ Listo !',
+                'El contenido ha sido eliminado',
+        )
+        } else if (
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            swalWithBootstrapButtons.fire(
+            '¡ Genial !',
+            'Tu información se mantiene a salvo :)',
+        )    
+        }
+    })
+}
 
 function validateform(e){
     e.preventDefault();
     console.log("¡Tu formulario fue enviado con éxito!");
 
-    Toastify({
-        text: "¡Tu formulario fue enviado con éxito!",
-        duration: 6000,
-        destination: "https://github.com/apvarun/toastify-js",
-        newWindow: true,
-        close: true,
-        gravity: "bottom", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-            color: "black",
-            background: "linear-gradient(to right, rgb(84, 76, 141), rgb(214, 182, 188), rgb(248, 243, 253))",
-        },
-        onClick: function(){} // Callback after click
-    }).showToast();
+    let botonGuardado = document.getElementById("botonGuardado");
+    botonGuardado.addEventListener("click", registroForm);
     
-    // for(let i= 0; i < 1; i++){
-    // if(i==1) {
-    //     break;
-    // }
-
-    function comprobarBreak(x) {
-        var i = 0;
-        while (i < 1) {
-            if (i == 1)
-                break;
-            i++;
+    function registroForm(){
+        listaDatos.push();
+        localStorage.setItem("usuario1", JSON.stringify(listaDatos));
+    
+        function getListaDatos(){
+            let listaDatos = localStorage.getItem("usuario1");
+    
+            if(listaDatos !== null){
+                usuario1 = JSON.parse(localStorage.getItem("usuario1"));
+            }
         }
-        return i * x;
+        getListaDatos();
+    
+        Toastify({
+            text: "Tu información se ha guardado correctamente",
+            duration: 6000,
+            newWindow: false,
+            close: true,
+            gravity: "bottom",
+            position: "center",
+            stopOnFocus: false,
+            style: {
+                color: "black",
+                background: "linear-gradient(to right, rgb(84, 76, 141), rgb(214, 182, 188), rgb(248, 243, 253))",
+            },
+            onClick: function(){}
+        }).showToast();
     }
+    registroForm(); 
 
+    fetch("data.json")
+    .then((response) => response.json())  
+    .catch((error) => console.log(error))
+    .then((data) => {
+
+    let botonSubmit = document.getElementById("botonSubmit");
+    botonSubmit.addEventListener ("click", mensajeEnviado)
+
+    function mensajeEnviado(){
+        Toastify({
+            text: "¡Tu formulario fue enviado con éxito!",
+            duration: 6000,
+            newWindow: true,
+            close: true,
+            gravity: "bottom",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+                color: "black",
+                background: "linear-gradient(to right, rgb(84, 76, 141), rgb(214, 182, 188), rgb(248, 243, 253))",
+            },
+            onClick: function(){}
+        }).showToast();
+    }
     if(inputEdad.value >= 18){
         
         let card = document.getElementById("div1");
-        for(const destino of listaDestinos){
+        for(const destino of data){
             let laCard = document.createElement("div");
             laCard.style.backgroundColor="#E9C8EC";
             laCard.style.textAlign="center";
@@ -108,7 +198,6 @@ function validateform(e){
         alert("Este es el precio total de tu presupuesto: $" + precioTotal + ". Por otras consultas contactate con nosotros!")
     }
 
-
     else if(inputEdad.value < 18){
         let card2 = document.getElementById("div2");
         let mensajeMenores = document.createElement("div");
@@ -121,68 +210,7 @@ function validateform(e){
 
         card2.append(mensajeMenores);
     }
-    comprobarBreak();
+    })
 }
 
 form.addEventListener("submit", validateform);
-
-
-
-
-let botonGuardado = document.getElementById("botonGuardado");
-botonGuardado.addEventListener("click", registroForm);
-
-function registroForm(nuevoUsuario){
-    listaDatos.push(nuevoUsuario);
-    localStorage.setItem("usuario1", JSON.stringify(listaDatos));
-
-
-    function getListaDatos(){
-        let listaDatos = localStorage.getItem("usuario1");
-
-        if(listaDatos !== null){
-            usuario1 = JSON.parse(localStorage.getItem("usuario1"));
-        }
-    }
-    getListaDatos();
-}
-registroForm(nuevoUsuario);
-
-
-/*INTENTO*/
-// function registroForm(){
-    
-// localStorage.setItem("array1", JSON.stringify(listaDatos));
-
-// let arrayRecojido = JSON.parse(localStorage.getItem("array1"));
-// console.log(arrayRecojido);  
-// }
-
-/*OTRO INTENTO*/
-    // function registroForm(){
-    
-    //     let toSave = [];
-    
-    //     for(let i = 0; i < listaDatos; i++){
-    //     let toSave1 = listaDatos(i)
-    
-    //     let toSaveInfo = {
-    //     task: toSave1.innerText,        
-    //         }
-    
-    //     toSave.push(toSaveInfo)
-    // }
-    
-    // localStorage.setItem("formularioGuardado", JSON.stringify(toSave))
-    // }
-
-    // function loadForm(){
-
-    //     let formularioGuardado = JSON.parse(localStorage.getItem("formularioGuardado"))
-    
-    //     for(let i = 0; i < listaDatos; i++)
-    // }
-
-    // loadForm()
-
-    // console.log(listaDatos)
