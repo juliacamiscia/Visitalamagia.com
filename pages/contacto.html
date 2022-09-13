@@ -56,40 +56,40 @@
                     <label for="edad">Edad:</label>
                     <input type="number" name="Edad" id="edad">
                     <label for="sexo">Género:</label>
-                    <input type="radio" name="Sexo" id="formSexoMasc" value="Masculino"> Masculino
-                    <input type="radio" name="Sexo" id="formSexoFem" value="Femenino"> Femenino
-                    <input type="radio" name="Sexo" id="formSexoOtro" value="Otro" checked> Otro
+                    <input type="radio" name="Sexo" value="Masculino"> Masculino
+                    <input type="radio" name="Sexo" value="Femenino"> Femenino
+                    <input type="radio" name="Sexo" value="Otro" checked> Otro
                     <label for="telefono">Número de teléfono:</label>
                     <input type="number" name="Teléfono" id="formTel">
                     <label for="email">E-mail</label>
                     <input type="email" name="Email" id="formEmail">
                     <label for="viaje">¿Es la primera vez que viajas?</label>
-                    <input type="radio" name="viaje" class="respuestas" value="Sí" checked> Sí
-                    <input type="radio" name="viaje" class="respuestas" value="No"> No 
+                    <input type="radio" name="viaje" value="Sí" checked> Sí
+                    <input type="radio" name="viaje" value="No"> No 
                     <label for="compania">¿Con quién tienes pensado viajar?</label>
                     <select name="compania">
-                        <option class="respuestas" value="solo" selected>Solo</option>
-                        <option class="respuestas" value="pareja">En pareja</option>
-                        <option class="respuestas" value="fsinhijos">Familia sin hijos</option>
-                        <option class="respuestas" value="fconhijos">Familia con hijos</option>
-                        <option class="respuestas" value="grupo">En grupo de amigos</option>
+                        <option value="solo" selected>Solo</option>
+                        <option value="pareja">En pareja</option>
+                        <option value="fsinhijos">Familia sin hijos</option>
+                        <option value="fconhijos">Familia con hijos</option>
+                        <option value="grupo">En grupo de amigos</option>
                     </select>
                     <label for="lugares">¿Qué lugares te gustaría visitar?</label>
-                    <input type="checkbox" value="disney" name="disney" class="respuestas">Parques de Disney
-                    <input type="checkbox" value="universal" name="universal" class="respuestas">Parques de Universal Studios
-                    <input type="checkbox" value="acuaticos" name="acuaticos" class="respuestas"> Parques Acuáticos
-                    <input type="checkbox" value="compras" name="compras" class="respuestas"> Paseos de Compras
+                    <input type="checkbox" value="disney" name="disney">Parques de Disney
+                    <input type="checkbox" value="universal" name="universal">Parques de Universal Studios
+                    <input type="checkbox" value="acuaticos" name="acuaticos"> Parques Acuáticos
+                    <input type="checkbox" value="compras" name="compras"> Paseos de Compras
                     <label for="hotel">¿Dónde te gustaría hospedarte?</label>
                     <select name="hotel">
-                        <option value="hdisney" class="respuestas">Hoteles Disney</option>
-                        <option value="huniversal" class="respuestas">Hoteles Universal</option>
-                        <option value="otro" class="respuestas">Otros</option>
-                        <option value="nosabe" class="respuestas">Aún no lo tengo definido</option>
+                        <option value="hdisney">Hoteles Disney</option>
+                        <option value="huniversal">Hoteles Universal</option>
+                        <option value="otro">Otros</option>
+                        <option value="nosabe">Aún no lo tengo definido</option>
                     </select>
                     <label for="mensaje">Dejanos tu mensaje</label>
-                    <textarea name="mensaje" class="respuestas" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <textarea name="mensaje" id="formMensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
                     <input type="submit" value="Enviar y Guardar" id="botonSubmit">
-                    <button id="botonLimpiar" class="borrarForm">Limpiar los campos</button>
+                    <button id="botonLimpiar" class="borrarForm">Borrar datos</button>
                 </fieldset>
             </form>
             <div id="div1"></div>
@@ -113,6 +113,6 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.28/dist/sweetalert2.all.min.js"></script>
         <script src="../js/bootstrap.bundle.min.js"></script>
-        <script src="../js/prueba.js"></script>
+        <script src="../js/script.js"></script>
     </body>
 </html>

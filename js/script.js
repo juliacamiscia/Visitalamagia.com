@@ -13,7 +13,6 @@ setTimeout(() => {
     })
 }, 1000)
 
-
 function Destino(nombre, precio, imagen) {
     this.nombre = nombre;
     this.precio = precio;
@@ -30,24 +29,18 @@ function calculoPrecio(cantidad, precio) {
 let inputEdad = document.getElementById("edad");
 let form = document.getElementById('form');
 let formNombre = document.getElementById("formNombre");
-let formSexoMasc = document.getElementById("formSexoMasc");
-let formSexoFem = document.getElementById("formSexoFem");
-let formSexoOtro = document.getElementById("formSexoOtro");
 let formTel = document.getElementById("formTel");
 let formEmail = document.getElementById("formEmail");
+let formMensaje = document.getElementById("formMensaje");
 
-let listaDatos = [formNombre, inputEdad, formSexoMasc, formSexoFem, formSexoOtro, formTel, formEmail];
+// const listaDatos = {Nombre: formNombre, Edad: inputEdad,Tel: formTel, Email: formEmail};
 
-let array = []  //CREO UN ARRAY VACIO PARA GUARDAR LA DATA QUE VIENE DEL JSON Y UTILIZARLA EN VALIDATEFORM()
-fetch("./data.json")
+let array = []  
+fetch("data.json")
     .then((response) => response.json())
     .then(data => array = data)
     .then(res => console.log(res))
     .catch((error) => console.log(error))
-
-/******************************************************** */
-/* FETCH QUE TRAE LA DATA 👆 */
-/******************************************************** */
 
 function validateform(e) {
     e.preventDefault();
@@ -66,8 +59,13 @@ function validateform(e) {
 
             card.append(laCard);
         }
-        localStorage.setItem('usuario', JSON.stringify( listaDatos.value))
+        localStorage.setItem('Nombre', JSON.stringify(formNombre.value))
+        localStorage.setItem('Edad', JSON.stringify(inputEdad.value))
+        localStorage.setItem('Teléfono', JSON.stringify(formTel.value))
+        localStorage.setItem('Email', JSON.stringify(formEmail.value))
+        localStorage.setItem('Mensaje', JSON.stringify(formMensaje.value))
         console.log(localStorage)
+
         Toastify({
             text: "¡Tu formulario fue enviado con éxito!",
             duration: 6000,
@@ -82,6 +80,7 @@ function validateform(e) {
             },
             onClick: function () { }
         }).showToast();
+        
         Toastify({
             text: "Tu información se ha guardado correctamente",
             duration: 6000,
@@ -138,16 +137,11 @@ function validateform(e) {
     }
 }
 form.addEventListener("submit", validateform);
-/******************************************************** */
-/* BOTON VALIDAR FORMULARIO  👆 */
-/******************************************************** */
-
 
 let botonLimpiar = document.getElementById("botonLimpiar");
-botonLimpiar.addEventListener("click", mensajeLimpiar)
+botonLimpiar.addEventListener("click", mensajeLimpiar);
 function mensajeLimpiar(e) {
-    e.preventDefault()   // AL UTILIZAR FORM RECORDA PREVENIR EL COMPORTAMIENTO POR DEFECTO SI USAS OTROS BOTONES EN OTRAS FUNCIONES,
-                        // YA QUE SINO SE VUELVE A DISPARAR LA FUNCION VALIDATE FORM.
+    e.preventDefault()  
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
             confirmButton: 'btn',
@@ -170,7 +164,11 @@ function mensajeLimpiar(e) {
         reverseButtons: false,
     }).then((result) => {
         if (result.isConfirmed) {
-            localStorage.removeItem('usuario')  //BORRO EL USUARIO REGISTRADO
+            localStorage.removeItem('Nombre')  //BORRO EL USUARIO REGISTRADO
+            localStorage.removeItem('Edad')
+            localStorage.removeItem('Teléfono')  
+            localStorage.removeItem('Email')
+            localStorage.removeItem('Mensaje')  
             console.log(localStorage)
 
             swalWithBootstrapButtons.fire(
@@ -187,6 +185,3 @@ function mensajeLimpiar(e) {
         }
     })
 }
-            /******************************************************** */
-/* BOTON LIMMPIAR DATOS 👆 */
-/******************************************************** */
